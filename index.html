@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WRR2</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  
+  <body>
+
+    <div class='modal hidden'>
+      <button onclick='closeModal()'>
+        Close me
+      </button>
+      <iframe src="url" class='modal-iframe' scrolling="yes"></iframe>
+      <div class='dark-overlay' onclick='closeModal()'></div>
+    </div>
+
+    <main class='homepage-container'>
+      <h1>Project Title</h1>
+  
+      <div class='node-map'>
+        <button onclick='openModal(`stories/story-one.html`)'>
+          The Rapper
+        </button>
+        <button onclick='openModal(`stories/story-two.html`)'>
+          The Family
+        </button>
+        <button onclick='openModal(`stories/story-three.html`)'>
+          Drill Rap
+        </button>
+        <button onclick='openModal(`stories/story-four.html`)'>
+          The Demon
+        </button>
+        <button onclick='openModal(`stories/story-five.html`)'>
+          The Fans
+        </button>
+      </div>
+  
+      <div class='bottom-navigation'>
+        <button onclick='openModal(`about.html`)'>
+          About
+        </button>
+        <button onclick='openModal(`behind-the-scenes.html`)'>
+          BTS
+        </button>
+      </div>
+    </main>
+  
+    <script src="script.js"></script>
+  </body>
+</html>

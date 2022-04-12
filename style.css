@@ -1,0 +1,252 @@
+/* Global */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: white;
+  margin: 0;
+}
+
+/* Modal */
+.hidden {
+  display: none;
+}
+
+.modal {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal iframe {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.modal .dark-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0,0.5);
+}
+
+/* Homepage */
+
+.homepage-container {
+  text-align: center;
+}
+
+.bottom-navigation {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.bottom-navigation button {
+  padding: 16px 48px;
+  border-radius: 8px 8px 0px 0px;
+  border-bottom: 0px;
+  border-style: none;
+}
+.bottom-navigation button:hover {
+  background: #777;
+}
+
+/* Node Map */
+
+.node-map button {
+  width: 2rem;
+  height: 2rem;
+  padding: 4rem;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Video story page */
+
+.story-title {
+  padding: 0 2rem;
+}
+.video-wrapper {
+  position: relative;
+    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* About Page */
+
+.about-header {
+  padding: 0 2rem;
+}
+
+.bio-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.bio-card {
+  column-span: 1;
+  padding: 1rem;
+}
+.bio-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  box-shadow: 0 3px 6px 0;
+  border-radius: 12px;
+}
+/* .bio-card:hover .bio-card-inner {
+  transform: rotateY(180deg);
+} */
+.bio-card-front, .bio-card-back {
+/*   position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; */
+  border-radius: 12px;
+}
+.bio-card-front {
+  background-color: whitesmoke;
+  color: black;
+  overflow: hidden;
+}
+.bio-card-back {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  color: black;
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+.bio-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom:75%;
+}
+.bio-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  object-fit: cover;
+}
+
+.bio-title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: whitesmoke;
+}
+
+.bio-title h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.bio-title p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.bio-card-back p {
+  padding: 0 0.25rem;
+  margin-bottom: 0;
+}
+
+.social-link-box {
+/*   z-index: -1;
+  position: absolute;
+  width: 100%;
+  bottom: 0; */
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: lightgray;
+}
+.social-link {
+  text-decoration: none;
+  margin-right: 0.5rem;
+  color: black;
+}
+
+i {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .bio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 599px) {
+  .bio-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+.mainheader {font-family: roboto sans-serif; 
+             font-size: 40px;
+            }
+
+/* Photo Gallery */ 
+.photo-card-1 {
+transform: translate(-50%, -50%) rotate(-1deg) translate(-108px, -10px) translate3d(-316.4512195121951px, -123.29268292682926px, 0px) rotate(3.2878048780487803deg);
+              }
+.photo-card {box-sizing: border-box; display: block; height: 240px; width: 360px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px
+}
