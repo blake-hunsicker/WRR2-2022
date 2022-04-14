@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>WRR2</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    
   </head>
-  
-  <body>
 
-    <div class='modal hidden'>
-      <button onclick='closeModal()'>
-        Close me
-      </button>
-      <iframe src="url" class='modal-iframe' scrolling="yes"></iframe>
-      <div class='dark-overlay' onclick='closeModal()'></div>
+  <body>
+    <div class="modal hidden">
+      <div class="modal-wrapper">
+        <button class="modal-close-button" onclick="closeModal()">
+          &times;
+        </button>
+        <iframe src="url" class="modal-iframe" scrolling="yes"></iframe>
+      </div>
+      <div class="dark-overlay" onclick="closeModal()"></div>
     </div>
 
-    <main class='homepage-container'>
+    <main class="homepage-container">
       <h1>Project Title</h1>
-  
-      <div class='story-list'>
-        <div class='category-container' id='thesis'>
-          <button onclick='openModal(`thesis.html`)'>
-            Thesis
-          </button>
+
+      <div class="story-list">
+        <div class="category-container" id="thesis">
+          <button onclick="openModal(`thesis.html`)">Thesis</button>
         </div>
-        <div class='category-container' id='category-one'>
+        <div class="category-container" id="category-one">
           Category One
-          <button onclick='openModal(`stories/story-one.html`)'>
+          <button onclick="openModal(`stories/story-one.html`)">
             Story One
           </button>
-          <button onclick='openModal(`stories/story-two.html`)'>
+          <button onclick="openModal(`stories/story-two.html`)">
             Story Two
           </button>
         </div>
-        <div class='category-container' id='category-two'>
+        <div class="category-container" id="category-two">
           Category Two
-          <button onclick='openModal(`stories/story-three.html`)'>
+          <button onclick="openModal(`stories/story-three.html`)">
             Story Three
           </button>
-          <button onclick='openModal(`stories/story-four.html`)'>
+          <button onclick="openModal(`stories/story-four.html`)">
             Story Four
           </button>
         </div>
-        <div class='category-container' id='category-three'>
+        <div class="category-container" id="category-three">
           Category Three
-          <button onclick='openModal(`stories/story-five.html`)'>
+          <button onclick="openModal(`stories/story-five.html`)">
             Story Five
           </button>
         </div>
       </div>
-  
-      <div class='bottom-navigation'>
-        <button onclick='openModal(`about.html`)'>
-          About
-        </button>
-        <button onclick='openModal(`behind-the-scenes.html`)'>
-          BTS
-        </button>
+
+      <div class="bottom-navigation">
+        <button onclick="openModal(`about.html`)">About</button>
+        <button onclick="openModal(`behind-the-scenes.html`)">BTS</button>
       </div>
     </main>
-  
+
     <script src="script.js"></script>
   </body>
 </html>
