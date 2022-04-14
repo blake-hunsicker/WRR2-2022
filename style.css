@@ -1,11 +1,13 @@
 /* Global */
 
 body {
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
   background: white;
   margin: 0;
+}
+
+main.homepage-container {
+  overflow: hidden;
 }
 
 /* Modal */
@@ -15,8 +17,14 @@ body {
 
 .modal {
   z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .modal iframe {
@@ -32,6 +40,11 @@ body {
   border: none;
   outline: none;
   background: white;
+  overflow-x: hidden;
+}
+
+.modal iframe body {
+  overflow-x: hidden;
 }
 
 .modal .dark-overlay {
@@ -42,7 +55,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(0,0,0,0.5);
+  background: rgb(0, 0, 0, 0.5);
 }
 
 /* Homepage */
@@ -90,24 +103,23 @@ body {
 }
 .video-wrapper {
   position: relative;
-    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
-    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
-    /* padding-bottom: 75%; - 4:3 aspect ratio */
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+  padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+  /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+  /* padding-bottom: 75%; - 4:3 aspect ratio */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
 .video-wrapper iframe,
 .video-wrapper object,
 .video-wrapper embed {
-    border: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
 
 /* About Page */
 
@@ -138,8 +150,9 @@ body {
 /* .bio-card:hover .bio-card-inner {
   transform: rotateY(180deg);
 } */
-.bio-card-front, .bio-card-back {
-/*   position: absolute;
+.bio-card-front,
+.bio-card-back {
+  /*   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
@@ -167,7 +180,7 @@ body {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom:75%;
+  padding-bottom: 75%;
 }
 .bio-image {
   position: absolute;
@@ -203,7 +216,7 @@ body {
 }
 
 .social-link-box {
-/*   z-index: -1;
+  /*   z-index: -1;
   position: absolute;
   width: 100%;
   bottom: 0; */
@@ -222,6 +235,33 @@ i {
   padding: 0.5rem 0;
 }
 
+/* Multimedia Story Page */
+
+.story-subhead {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.multimedia-grid {
+  margin: 0 5rem;
+  display: inline-flex;
+}
+
+.multi-image {
+  max-width: 400px;
+  max-height: 300px;
+}
+
+blockquote {
+  max-width: 25%;
+  max-height: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* Tablet */
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
@@ -238,15 +278,28 @@ i {
   }
 }
 
+.mainheader {
+  font-family: roboto sans-serif;
+  font-size: 40px;
+}
 
-
-.mainheader {font-family: roboto sans-serif; 
-             font-size: 40px;
-            }
-
-/* Photo Gallery */ 
+/* Photo Gallery */
 .photo-card-1 {
-transform: translate(-50%, -50%) rotate(-1deg) translate(-108px, -10px) translate3d(-316.4512195121951px, -123.29268292682926px, 0px) rotate(3.2878048780487803deg);
-              }
-.photo-card {box-sizing: border-box; display: block; height: 240px; width: 360px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px
+  transform: translate(-50%, -50%) rotate(-1deg) translate(-108px, -10px)
+    translate3d(-316.4512195121951px, -123.29268292682926px, 0px)
+    rotate(3.2878048780487803deg);
+}
+.photo-card {
+  box-sizing: border-box;
+  display: block;
+  height: 240px;
+  width: 360px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
 }
