@@ -8,6 +8,9 @@ function openModal(pageUrl) {
   const modal = document.querySelector('.modal');
   modal.classList.toggle('hidden');
 
+  const body = document.querySelector('body');
+  body.classList.toggle('freeze');
+
   // // Show loading message
   // if (document.readyState === 'complete') {
   //   // The page is fully loaded
@@ -23,6 +26,9 @@ function closeModal() {
   
   const modal = document.querySelector('.modal');
   modal.classList.toggle('hidden');
+
+  const body = document.querySelector('body');
+  body.classList.toggle('freeze');
   
 };
 

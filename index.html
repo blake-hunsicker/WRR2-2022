@@ -21,22 +21,36 @@
     <main class='homepage-container'>
       <h1>Project Title</h1>
   
-      <div class='node-map'>
-        <button onclick='openModal(`stories/story-one.html`)'>
-          The Rapper
-        </button>
-        <button onclick='openModal(`stories/story-two.html`)'>
-          The Family
-        </button>
-        <button onclick='openModal(`stories/story-three.html`)'>
-          Drill Rap
-        </button>
-        <button onclick='openModal(`stories/story-four.html`)'>
-          The Demon
-        </button>
-        <button onclick='openModal(`stories/story-five.html`)'>
-          The Fans
-        </button>
+      <div class='story-list'>
+        <div class='category-container' id='thesis'>
+          <button onclick='openModal(`thesis.html`)'>
+            Thesis
+          </button>
+        </div>
+        <div class='category-container' id='category-one'>
+          Category One
+          <button onclick='openModal(`stories/story-one.html`)'>
+            Story One
+          </button>
+          <button onclick='openModal(`stories/story-two.html`)'>
+            Story Two
+          </button>
+        </div>
+        <div class='category-container' id='category-two'>
+          Category Two
+          <button onclick='openModal(`stories/story-three.html`)'>
+            Story Three
+          </button>
+          <button onclick='openModal(`stories/story-four.html`)'>
+            Story Four
+          </button>
+        </div>
+        <div class='category-container' id='category-three'>
+          Category Three
+          <button onclick='openModal(`stories/story-five.html`)'>
+            Story Five
+          </button>
+        </div>
       </div>
   
       <div class='bottom-navigation'>
