@@ -345,6 +345,19 @@ blockquote {
 /* Mobile */
 
 @media screen and (max-width: 599px) {
+  /* Modal */
+
+  .modal iframe {
+    z-index: 3;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 92vh;
+  }
+
   /* Story list */
 
   /* .story-list {
@@ -353,5 +366,18 @@ blockquote {
 
   .bio-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  .modal iframe {
+    z-index: 3;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 92vh;
   }
 }
