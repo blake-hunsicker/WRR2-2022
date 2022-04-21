@@ -211,7 +211,6 @@ nav button {
   margin: auto;
   border: none;
   outline: none;
-  background: white;
   overflow: hidden;
 }
 
@@ -227,7 +226,7 @@ nav button {
   width: 2rem;
   border: none;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: white;
   align-items: center;
   text-align: center;
 }
@@ -567,6 +566,13 @@ blockquote {
   }
 
   /* Modal */
+
+  .modal-wrapper {
+    top: 10px;
+    width: 100vw;
+    height: 90vh;
+    top: 10vh;
+  }
 
   .modal iframe {
     z-index: 3;
