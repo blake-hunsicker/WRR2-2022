@@ -4,10 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>WRR2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
+  <body class="freeze">
+
+    <div class="intro-modal">
+      <div class="intro-modal-wrapper">
+        <h3 onclick="closeIntroModal()">The user needs to click or tap the page or else Chrome will block video autoplay</h3>
+        <p>Let's use a dismissable modal to introduce the project, or come up with some other way to get the user to click before scrolling</p>
+      </div>
+      <div class="dark-overlay" onclick="closeIntroModal()"></div>
+    </div>
+
     <div class="modal hidden">
       <div class="modal-wrapper">
         <button class="modal-close-button" onclick="closeModal()">
@@ -18,8 +28,45 @@
       <div class="dark-overlay" onclick="closeModal()"></div>
     </div>
 
+    <nav>
+      <h5>Project Title</h5>
+    </nav>
+
+    <section class="immersive-intro">
+
+      <div class="immersive-intro-section title-section">
+        <h1>Drill Deep</h1>
+        <div class="site-hero-image-wrapper">
+          <img class="site-hero-image" src="assets/sample-pics/three.jpeg" />
+        </div>
+      </div>
+
+      <div class="immersive-intro-section adams-video">
+        <div class="immersive-video-wrapper">
+          <video controls autoplay playsinline loop >
+            <source src="assets/videos/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="immersive-intro-section text-card">
+        <div class="content">
+          <h2>Something that gives context to the readers</h2>
+        </div>
+      </div>
+
+      <div class="immersive-intro-section multimedia-card">
+        <div class="immersive-video-wrapper">
+          <video controls autoplay playsinline loop>
+            <source src="assets/videos/mov_coop_landing_page.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
     <main class="homepage-container">
-      <h1>Project Title</h1>
 
       <div class="story-list">
         <div class="category-container" id="thesis">
@@ -27,30 +74,30 @@
         </div>
         <div class="category-container" id="category-one">
           Category One
-          <div class='buttons'>
-            <button onclick='openModal(`stories/story-one.html`)'>
+          <div class="buttons">
+            <button onclick="openModal(`stories/story-one.html`)">
               Story One
             </button>
-            <button onclick='openModal(`stories/story-two.html`)'>
+            <button onclick="openModal(`stories/story-two.html`)">
               Story Two
             </button>
           </div>
         </div>
         <div class="category-container" id="category-two">
           Category Two
-          <div class='buttons'>
-            <button onclick='openModal(`stories/story-three.html`)'>
+          <div class="buttons">
+            <button onclick="openModal(`stories/story-three.html`)">
               Story Three
             </button>
-            <button onclick='openModal(`stories/story-four.html`)'>
+            <button onclick="openModal(`stories/story-four.html`)">
               Story Four
             </button>
           </div>
         </div>
         <div class="category-container" id="category-three">
           Category Three
-          <div class='buttons'>
-            <button onclick='openModal(`stories/story-five.html`)'>
+          <div class="buttons">
+            <button onclick="openModal(`stories/story-five.html`)">
               Story Five
             </button>
           </div>
