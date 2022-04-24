@@ -4,19 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>WRR2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body class="freeze">
+  <body>
 
-    <div class="intro-modal">
+    <!-- <div class="intro-modal">
       <div class="intro-modal-wrapper">
         <h3 onclick="closeIntroModal()">The user needs to click or tap the page or else Chrome will block video autoplay</h3>
         <p>Let's use a dismissable modal to introduce the project, or come up with some other way to get the user to click before scrolling</p>
       </div>
       <div class="dark-overlay" onclick="closeIntroModal()"></div>
-    </div>
+    </div> -->
 
     <div class="modal hidden">
       <div class="modal-wrapper">
@@ -47,7 +47,7 @@
 
       <div class="immersive-intro-section adams-video">
         <div class="immersive-video-wrapper">
-          <video controls autoplay playsinline loop >
+          <video controls playsinline loop poster="assets/gifs/nature.gif">
             <source src="assets/videos/mov_bbb.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
@@ -62,20 +62,28 @@
 
       <div class="immersive-intro-section multimedia-card">
         <div class="immersive-video-wrapper">
-          <video controls autoplay playsinline loop>
-            <source src="assets/videos/mov_coop_landing_page.mp4" type="video/mp4">
+          <video controls playsinline loop poster="assets/gifs/nature.gif">
+            <source src="assets/videos/coop_landing_page.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
         </div>
       </div>
+
+      <!-- <div class="immersive-intro-section multimedia-card">
+        <div class="content">
+          <img src="assets/sample-pics/two.jpeg"
+          <h2>Something that gives context to the readers</h2>
+          <h2>Something that gives context to the readers</h2>
+          <h2>Something that gives context to the readers</h2>
+          <h2>Something that gives context to the readers</h2>
+          <h2>Something that gives context to the readers</h2>
+        </div>
+      </div> -->
     </section>
 
     <main class="homepage-container">
 
       <div class="story-list">
-        <div class="category-container" id="thesis">
-          <button onclick="openModal(`thesis.html`)">Thesis</button>
-        </div>
         <div class="category-container" id="category-one">
           Category One
           <div class="buttons">
