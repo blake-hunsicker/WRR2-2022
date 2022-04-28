@@ -36,52 +36,36 @@
       </div>
     </nav>
 
-    <section class="immersive-intro">
+    <main class="homepage-container freeze">
 
       <div class="immersive-intro-section title-section">
-        <h1>Drill Deep</h1>
-        <div class="site-hero-image-wrapper">
-          <img class="site-hero-image" src="assets/sample-pics/three.jpeg" />
+        <div class="title-text">
+          <h1>Drill Deep</h1>
+          <div class="section-links">
+            <h4>Category</h4>
+            <h4>Category</h4>
+            <h4>Category</h4>
+          </div>
         </div>
+        <button class="play-button" onclick="startIntro()">
+          Start
+        </button>
+        <img class="site-hero-image" src="assets/sample-pics/three.jpeg" />
       </div>
 
-      <div class="immersive-intro-section adams-video">
-        <div class="immersive-video-wrapper">
-          <video controls playsinline loop poster="assets/gifs/nature.gif">
-            <source src="assets/videos/mov_bbb.mp4" type="video/mp4">
+      <div class="immersive-intro-section adams-video" id="adams-video">
+        <video controls playsinline loop poster="assets/gifs/nature.gif" class="adams">
+          <!-- <source src="assets/videos/coop_landing_page.mp4" type="video/mp4"> -->
           Your browser does not support the video tag.
-          </video>
-        </div>
+        </video>
       </div>
 
-      <div class="immersive-intro-section text-card">
-        <div class="content">
-          <h2>Something that gives context to the readers</h2>
-        </div>
-      </div>
-
-      <div class="immersive-intro-section multimedia-card">
-        <div class="immersive-video-wrapper">
-          <video controls playsinline loop poster="assets/gifs/nature.gif">
-            <source src="assets/videos/coop_landing_page.mp4" type="video/mp4">
+      <div class="immersive-intro-section coop-video" id="coop-video">
+        <video controls playsinline loop poster="assets/gifs/nature.gif" class="coop">
+          <!-- <source src="assets/videos/coop_landing_page.mp4" type="video/mp4"> -->
           Your browser does not support the video tag.
-          </video>
-        </div>
+        </video>
       </div>
-
-      <!-- <div class="immersive-intro-section multimedia-card">
-        <div class="content">
-          <img src="assets/sample-pics/two.jpeg"
-          <h2>Something that gives context to the readers</h2>
-          <h2>Something that gives context to the readers</h2>
-          <h2>Something that gives context to the readers</h2>
-          <h2>Something that gives context to the readers</h2>
-          <h2>Something that gives context to the readers</h2>
-        </div>
-      </div> -->
-    </section>
-
-    <main class="homepage-container">
 
       <div class="story-list">
         <div class="category-container" id="category-one">
@@ -116,10 +100,6 @@
         </div>
       </div>
 
-      <!-- <div class="bottom-navigation">
-        <button onclick="openModal(`about.html`)">About</button>
-        <button onclick="openModal(`behind-the-scenes.html`)">BTS</button>
-      </div> -->
     </main>
 
     <script src="script.js"></script>

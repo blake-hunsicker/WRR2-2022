@@ -1,31 +1,49 @@
 // Intro click
-// function closeIntroModal() {
 
-//   const modal = document.querySelector('.intro-modal');
-//   modal.classList.toggle('hidden');
+const w = window.matchMedia("(max-width: 600px)");
+const videos = document.querySelectorAll('video');
 
-//   const body = document.querySelector('body');
-//   body.classList.toggle('freeze');
+if (w.matches) {
+  let i = 0;
 
-// }
+  for (i; i < videos.length; i++) {
 
-// Unmute videos
-// function unmute() {
-//   const localVideos = document.querySelectorAll('video');
+    const source = document.createElement('source');
+    source.setAttribute('type', 'video/mp4');
+    source.setAttribute('src', `assets/videos/mobile-video${i}.mp4`);
+    videos[i].appendChild(source);
+  }
+} else {
 
-//   let i = 0;
+  let i = 0;
 
-//   for (i; i < localVideos.length; i++) {
-//     localVideos[i].removeAttribute("muted","");
-//     localVideos[i].volume = 0.8;
-//     console.log("Unmuted video ", i)
-//     console.log("Video volume: ", localVideos[i].volume)
-//   }
-// }
+  for (i; i < videos.length; i++) {
+
+    const source = document.createElement('source');
+    source.setAttribute('type', 'video/mp4');
+    source.setAttribute('src', `assets/videos/desktop-video${i}.mp4`);
+    videos[i].appendChild(source);
+  }
+
+  console.log('You are on a large screen, all good');
+}
 
 // Autoshow video video
-window.addEventListener('load', videoScroll);
-window.addEventListener('scroll', videoScroll);
+
+function startIntro() {
+  const body = document.querySelector('main');
+  body.classList.remove('freeze');
+
+  const adamsVideo = document.querySelector('#adams-video');
+  adamsVideo.scrollIntoView({behavior: 'smooth'});
+  adamsVideo.querySelector('video').play();
+}
+
+// Autoshow video video
+
+const mainContainer = document.querySelector('.homepage-container')
+mainContainer.addEventListener('load', videoScroll);
+mainContainer.addEventListener('scroll', videoScroll);
 
 function videoScroll() {
   console.log('hi')
@@ -39,18 +57,20 @@ function videoScroll() {
           videoHeight = thisVideoEl.clientHeight,
           videoClientRect = thisVideoEl.getBoundingClientRect().top;
 
-      // Hide this because it autoplays videos
-      // if ( videoClientRect <= ( (windowHeight) - (videoHeight*.15) ) && videoClientRect >= ( 0 - ( videoHeight*.85 ) ) ) {
-      //   thisVideoEl.play();
-      // } else {
-      //   thisVideoEl.pause();
-      // }
+          console.log(videoClientRect)
 
-      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.4) ) && videoClientRect >= ( 0 - (videoHeight*.4) ) ) {
-        thisVideoEl.classList.add('appear');
+      // Hide this because it autoplays videos
+      if ( videoClientRect == 0 ) {
+        thisVideoEl.play();
       } else {
-        thisVideoEl.classList.remove('appear');
+        thisVideoEl.pause();
       }
+
+      // if ( videoClientRect <= ( (windowHeight) - (videoHeight*.4) ) && videoClientRect >= ( 0 - (videoHeight*.4) ) ) {
+      //   thisVideoEl.classList.add('appear');
+      // } else {
+      //   thisVideoEl.classList.remove('appear');
+      // }
 
     }
   }
