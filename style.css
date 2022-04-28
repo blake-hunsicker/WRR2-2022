@@ -169,7 +169,7 @@ nav button {
 button.play-button {
   z-index: 1;
   position: absolute;
-  bottom: 10vh;
+  bottom: 20vh;
   right: 0;
   left: 0;
   width: 140px;
