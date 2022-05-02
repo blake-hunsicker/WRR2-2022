@@ -1,32 +1,78 @@
-// Intro click
+// Load videos based on viewport width
 
-const w = window.matchMedia("(max-width: 600px)");
-const videos = document.querySelectorAll('video');
+// const w = window.matchMedia("(max-width: 600px)");
+// const videos = document.querySelectorAll('video');
 
-if (w.matches) {
-  let i = 0;
+window.addEventListener('resize', setVideoSize);
+window.addEventListener('DOMContentLoaded', setVideoSize);
 
-  for (i; i < videos.length; i++) {
+function setVideoSize() {
+  const w = window.matchMedia("(max-width: 600px)");
+  const videos = document.querySelectorAll('video');
 
-    const source = document.createElement('source');
-    source.setAttribute('type', 'video/mp4');
-    source.setAttribute('src', `assets/videos/mobile-video${i}.mp4`);
-    videos[i].appendChild(source);
+  if (w.matches) {
+    let i = 0;
+  
+    for (i; i < videos.length; i++) {
+  
+      const existingSource = videos[i].querySelector('source');
+      
+      existingSource ? existingSource.remove() : null;
+  
+      const source = document.createElement('source');
+      source.setAttribute('type', 'video/mp4');
+      source.setAttribute('src', `assets/landing-page/mobile-video${i}.mp4`);
+      videos[i].prepend(source);
+    }
+
+    console.log('Videos loaded for small screens');
+
+  } else {
+  
+    let i = 0;
+  
+    for (i; i < videos.length; i++) {
+
+      const existingSource = videos[i].querySelector('source');
+      
+      existingSource ? existingSource.remove() : null;
+  
+      const source = document.createElement('source');
+      source.setAttribute('type', 'video/mp4');
+      source.setAttribute('src', `assets/landing-page/desktop-video${i}.mp4`);
+      videos[i].appendChild(source);
+    }
+  
+    console.log('Videos loaded for large screens');
   }
-} else {
-
-  let i = 0;
-
-  for (i; i < videos.length; i++) {
-
-    const source = document.createElement('source');
-    source.setAttribute('type', 'video/mp4');
-    source.setAttribute('src', `assets/videos/desktop-video${i}.mp4`);
-    videos[i].appendChild(source);
-  }
-
-  console.log('You are on a large screen, all good');
 }
+
+// if (w.matches) {
+//   let i = 0;
+
+//   for (i; i < videos.length; i++) {
+
+//     // videos[i].querySelector('source').remove();
+
+//     const source = document.createElement('source');
+//     source.setAttribute('type', 'video/mp4');
+//     source.setAttribute('src', `assets/landing-page/mobile-video${i}.mp4`);
+//     videos[i].prepend(source);
+//   }
+// } else {
+
+//   let i = 0;
+
+//   for (i; i < videos.length; i++) {
+
+//     const source = document.createElement('source');
+//     source.setAttribute('type', 'video/mp4');
+//     source.setAttribute('src', `assets/videos/desktop-video${i}.mp4`);
+//     videos[i].appendChild(source);
+//   }
+
+//   console.log('You are on a large screen, all good');
+// }
 
 // Autoshow video video
 
