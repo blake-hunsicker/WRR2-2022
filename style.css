@@ -1,7 +1,7 @@
 /* Global */
 
 body {
-  font-family: "Roboto Mono";
+  font-family: 'Arvo', serif;
   height: 100vh;
   color: #eeeeee;
   background: #010101;
@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  font-family: "PT Serif";
+  font-family: 'Arvo', serif;
 }
 
 .hidden {
@@ -158,7 +158,13 @@ nav button {
 }
 
 .title-text h1 {
-  font-size: 4rem;
+  font-family: 'Rubik Glitch', cursive;
+  font-size: 6rem;
+  font-weight: 100;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .title-text .section-links {
