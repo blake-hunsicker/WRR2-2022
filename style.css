@@ -1,7 +1,7 @@
 /* Global */
 
 body {
-  font-family: 'Arvo', serif;
+  font-family: "Arvo", serif;
   height: 100vh;
   color: #eeeeee;
   background: #010101;
@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  font-family: 'Arvo', serif;
+  font-family: "Arvo", serif;
 }
 
 .hidden {
@@ -31,7 +31,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
 }
 
 nav h5 {
@@ -144,7 +144,7 @@ nav button {
   object-fit: cover;
   overflow: hidden;
 }
-.immersive-intro-section video::-webkit-media-controls-timeline{
+.immersive-intro-section video::-webkit-media-controls-timeline {
   display: none;
 }
 
@@ -166,7 +166,7 @@ nav button {
 }
 
 .title-text h1 {
-  font-family: 'Rubik Glitch', cursive;
+  font-family: "Rubik Glitch", cursive;
   font-size: 6rem;
   font-weight: 100;
   color: black;
