@@ -5,9 +5,41 @@
     <title>Photo Gallery</title>
     <!-- <link name="photo source" href='https://www.flickr.com/photos/195364631@N05/with/51995838299'/> -->
 <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+
+* {
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+      .caption {
+        display: flex;
+      }
+      .caption table {
+        display: block;
+        max-height: 200px;
+        overflow: hidden;
+      }
+      .sidebar {
+        max-width: 30rem;
+      }
+      .photo {
+        width: 100%;
+        position: sticky;
+        border: 1px solid;
+        top: 10vh;
+        height: 80vh;
+        margin-left: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .photo * {
+        max-height: 100%;
+      }
+</style>
 </head>
 <body>
-  <section id='scroll'>
+  <!-- <section id='scroll'>
     <div class='scroll-photo'>
       <div class='chart'>
         <img class="photo-card" src="https://live.staticflickr.com/65535/51995567721_e2d8d3491a_c.jpg"/>
@@ -47,8 +79,88 @@
  
 
   
-</div> 
+</div>  -->
+<div class="caption">
+  <div class="sidebar">
+    <style>
+      .level1 {
+        min-height: 400px;
+        border: 1px solid;
+        margin-bottom: 4em;
+        padding: 1em 2em 2em;
+      }
+      .is-active {
+        background-color: #434042;
+      }
+    </style>
+        <div id="caption-one" class="section level1 is-active" data-scrollama-index="1">
+       <p>“The mayor should have focused on how to get jobs into the hands of these folks.”
+      </p>
+     </div>
+     <div id="caption-two" class="section level1 is-active" data-scrollama-index="2">
+       <p>“A drill rapper talks about street sh*t. An artist has more styles, more melodies, more flows.”
+      </p>
+     </div>
+     <div id="caption-three" class="section level1 is-active" data-scrollama-index="3">
+       <p>“People are violent because they are hungry. If Drill music was gone, there would still be violence.”</p>
+     </div>
+  </div>
+  <div class="photo">
+    <div class="figure" data-scrollama-index="1">
+      <img src="https://live.staticflickr.com/65535/52043467769_8e0e5359c3_k.jpg" data-scrollama-index="1" class>
+    </div>
+    <div class="figure" data-scrollama-index="2">
+      <img src="https://live.staticflickr.com/65535/52043220261_a3ff8d3ac4_b.jpg" data-scrollama-index="2" class>
+    </div>
+    <div class="figure" data-scrollama-index="3">
+      <img src="https://live.staticflickr.com/65535/52043729675_627161c079_b.jpg" data-scrollama-index="3" class>
+    </div>
+  
 
+<script>
+
+(function() {
+  var scroller = scrollama(),
+      selector = "div.figure, img, table, video, embed, iframe, .html-widget",
+      container = document.querySelector(".photo");
+
+  scroller.setup({"step": ".section, " + selector})
+    .onStepEnter(res => {
+      var el = res.element;
+      el.classList.add("is-active");
+      var ex = el;
+      if (el.classList.contains("section")) {
+        ex = el.querySelector(selector);
+        if (!ex) {
+          container.innerHTML = "";
+          return;
+        }
+      }
+      if (ex.nodeName === "img" && ex.parentNode.classList.contains("figure")) {
+        ex = ex.parentNode;
+      }
+      container.innerHTML = "";
+      container.append(ex.cloneNode(true));
+      var els = container.querySelectorAll("*[width]");
+      for (var i = 0; i < els.length; i++) {
+        els[i].removeAttribute('width');
+      }
+    })
+    .onStepExit(res => {
+      res.element.classList.remove("is-active");
+    });
+
+  window.addEventListener("resize", scroller.resize);
+})();
+
+</script>
+
+
+
+
+
+
+</div>
 
   
 </body>
