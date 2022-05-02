@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>WRR2</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Drill Down</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-
     <!-- <div class="intro-modal">
       <div class="intro-modal-wrapper">
         <h3 onclick="closeIntroModal()">The user needs to click or tap the page or else Chrome will block video autoplay</h3>
@@ -29,77 +35,173 @@
     </div>
 
     <nav>
-      <h5>Project Title</h5>
+      <h5>Drill Down</h5>
       <div class="actions">
         <button onclick="openModal(`about.html`)">About</button>
-        <button onclick="openModal(`behind-the-scenes.html`)">Behind the Scenes</button>
+        <button onclick="openModal(`behind-the-scenes.html`)">
+          Behind the Scenes
+        </button>
       </div>
     </nav>
 
     <main class="homepage-container freeze">
-
       <div class="immersive-intro-section title-section">
         <div class="title-text">
-          <h1>Drill Deep</h1>
+          <h1>Drill Down</h1>
           <div class="section-links">
-            <h4>Category</h4>
-            <h4>Category</h4>
-            <h4>Category</h4>
+            <h4>Artist |</h4>
+            <h4>&nbsp;Industry |</h4>
+            <h4>&nbsp;Community</h4>
           </div>
         </div>
-        <button class="play-button" onclick="startIntro()">
-          Start
-        </button>
-        <img class="site-hero-image" src="assets/sample-pics/three.jpeg" />
+        <button class="play-button" onclick="startIntro()">Start</button>
+        <img class="site-hero-image" src="assets/sample-pics/SampleCover.png" />
       </div>
 
       <div class="immersive-intro-section adams-video" id="adams-video">
-        <video controls playsinline loop poster="assets/gifs/nature.gif" class="adams">
-          <!-- <source src="assets/videos/coop_landing_page.mp4" type="video/mp4"> -->
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="adams"
+        >
+          <source src="assets/videos/desktop-video0.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="immersive-intro-section coop-video" id="coop-video">
-        <video controls playsinline loop poster="assets/gifs/nature.gif" class="coop">
-          <!-- <source src="assets/videos/coop_landing_page.mp4" type="video/mp4"> -->
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="coop"
+        >
+          <source
+            src="assets/landing-page/coachCoopDesktop_2.mp4"
+            type="video/mp4"
+          />
+          <track
+            src="/assets/landing-page/coachCoopCaptions.vtt"
+            label="English"
+            kind="captions"
+            srclang="en-us"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="immersive-intro-section devyn-video" id="devyn-video">
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="coop"
+        >
+          <source
+            src="assets/landing-page/youngDevynQuoteDesktop_3.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="immersive-intro-section borleone-video" id="borleone-video">
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="borleone"
+        >
+          <source
+            src="assets/landing-page/borleoneQuoteDesktop_4.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="immersive-intro-section bill-video" id="bill-video">
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="bill"
+        >
+          <source
+            src="assets/landing-page/billTheDemonQuoteDesktop_6.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="immersive-intro-section shauna-video" id="shauna-video">
+        <video
+          controls
+          disablePictureInPicture
+          controlsList="nodownload noplaybackrate nofullscreen"
+          playsinline
+          loop
+          poster="assets/gifs/nature.gif"
+          class="shauna"
+        >
+          <source
+            src="assets/landing-page/shaunaJamesQuoteDesktop_5.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div class="story-list">
         <div class="category-container" id="category-one">
-          Category One
+          Artist & Family
           <div class="buttons">
-            <button onclick="openModal(`stories/story-one.html`)">
-              Story One
-            </button>
-            <button onclick="openModal(`stories/story-two.html`)">
-              Story Two
+            <button onclick="openModal(`stories/young-devyn.html`)">
+              Young Devyn
             </button>
           </div>
         </div>
         <div class="category-container" id="category-two">
-          Category Two
+          Artist & Industry
           <div class="buttons">
-            <button onclick="openModal(`stories/story-three.html`)">
-              Story Three
+            <button onclick="openModal(`stories/borleone.html`)">
+              Borleone
             </button>
-            <button onclick="openModal(`stories/story-four.html`)">
-              Story Four
+            <button onclick="openModal(`stories/shauna-james.html`)">
+              Shauna James
             </button>
           </div>
         </div>
         <div class="category-container" id="category-three">
-          Category Three
+          Artist & Community
           <div class="buttons">
-            <button onclick="openModal(`stories/story-five.html`)">
-              Story Five
+            <button onclick="openModal(`stories/bill-the-demon.html`)">
+              BillTheDemon
+            </button>
+            <button onclick="openModal(`stories/the-bro-experience.html`)">
+              The B.R.O. Experience
             </button>
           </div>
         </div>
       </div>
-
     </main>
 
     <script src="script.js"></script>
