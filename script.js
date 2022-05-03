@@ -85,15 +85,49 @@ function startIntro() {
   adamsVideo.querySelector('video').play();
 }
 
-// Autoshow video video
+// Auto add/hide image accompanying text animation
 
 const mainContainer = document.querySelector('.homepage-container')
+mainContainer.addEventListener('load', imageScroll);
+mainContainer.addEventListener('scroll', imageScroll);
+
+function imageScroll() {
+  if (document.querySelectorAll('.image-and-text').length > 0) {
+    const windowHeight = window.innerHeight;
+    const imageAndTextSection = document.querySelectorAll('.image-and-text');
+
+    for (let i = 0; i < imageAndTextSection.length; i++) {
+
+      let thisImageAndTextSection = imageAndTextSection[i];
+      let secHeight = thisImageAndTextSection.clientHeight;
+      let secClientReq = thisImageAndTextSection.getBoundingClientRect().top;
+
+      let quoteOne = thisImageAndTextSection.querySelector('.quote-1');
+      let quoteTwo = thisImageAndTextSection.querySelector('.quote-2');
+      let speaker = thisImageAndTextSection.querySelector('.speaker');
+      // Hide this because it autoplays videos
+      if ( secClientReq == 0 ) {
+        quoteOne.classList.add('play');
+        quoteTwo.classList.add('play');
+        speaker.classList.add('play');
+      } else {
+        // quoteOne.classList.toggle('play');
+        // quoteTwo.classList.toggle('play');
+        // speaker.classList.toggle('play');
+      }
+    }
+  }
+}
+
+
+
+// Autoshow video video
+
 mainContainer.addEventListener('load', videoScroll);
 mainContainer.addEventListener('scroll', videoScroll);
 
 function videoScroll() {
-  console.log('hi')
-  if ( document.querySelectorAll('video').length > 0) {
+  if (document.querySelectorAll('video').length > 0) {
     const windowHeight = window.innerHeight,
         videoEl = document.querySelectorAll('video');
 
