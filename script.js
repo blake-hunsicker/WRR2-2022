@@ -47,33 +47,6 @@ function setVideoSize() {
   }
 }
 
-// if (w.matches) {
-//   let i = 0;
-
-//   for (i; i < videos.length; i++) {
-
-//     // videos[i].querySelector('source').remove();
-
-//     const source = document.createElement('source');
-//     source.setAttribute('type', 'video/mp4');
-//     source.setAttribute('src', `assets/landing-page/mobile-video${i}.mp4`);
-//     videos[i].prepend(source);
-//   }
-// } else {
-
-//   let i = 0;
-
-//   for (i; i < videos.length; i++) {
-
-//     const source = document.createElement('source');
-//     source.setAttribute('type', 'video/mp4');
-//     source.setAttribute('src', `assets/videos/desktop-video${i}.mp4`);
-//     videos[i].appendChild(source);
-//   }
-
-//   console.log('You are on a large screen, all good');
-// }
-
 // Autoshow video video
 
 function startIntro() {
@@ -119,8 +92,6 @@ function imageScroll() {
   }
 }
 
-
-
 // Autoshow video video
 
 mainContainer.addEventListener('load', videoScroll);
@@ -156,12 +127,34 @@ function videoScroll() {
   }
 }
 
+// Expand and collapse sections
+
+function openStories(category) {
+  console.log(category);
+  const categoryContainer = document.querySelector(category);
+
+  // Expand category section
+  categoryContainer.classList.add('expanded');
+
+  // Show story buttons
+  const buttons = categoryContainer.querySelector('.buttons');
+  buttons.classList.toggle('hidden');
+}
+
 // Open modal
 function openModal(pageUrl) {
 
-  // Load page into iFrame
+  // Create iFrame
+  const newIFrame = document.createElement('iframe');
   const modalSiteContainer = document.querySelector('.modal-iframe');
-  modalSiteContainer.setAttribute('src',pageUrl);
+  newIFrame.setAttribute('src',pageUrl);
+  newIFrame.setAttribute('scrolling','yes');
+  newIFrame.classList.add('modal-iframe');
+
+  // Add iFrame to div
+  const modalWrapper = document.querySelector('.modal-wrapper');
+  modalWrapper.append(newIFrame);
+
 
   // Open modal
   const modal = document.querySelector('.modal');
@@ -188,6 +181,11 @@ function closeModal() {
 
   const body = document.querySelector('body');
   body.classList.toggle('freeze');
+
+  const newIFrame = document.querySelector('iframe');
+  newIFrame.remove();
+
+
   
 };
 

@@ -29,7 +29,7 @@
         <button class="modal-close-button" onclick="closeModal()">
           &times;
         </button>
-        <iframe src="url" class="modal-iframe" scrolling="yes"></iframe>
+        <!-- <iframe src="url" class="modal-iframe" scrolling="yes"></iframe> -->
       </div>
       <div class="dark-overlay" onclick="closeModal()"></div>
     </div>
@@ -151,32 +151,38 @@
 
       <div class="story-list">
         <div class="category-container" id="category-one">
-          Artist & Family
-          <div class="buttons">
-            <button onclick="openModal(`stories/young-devyn.html`)">
-              Young Devyn
+          <h2 class="category-title">Artist</h2>
+          <div class="view-cta" onclick="openStories(`#category-one`)">View stories</div>
+          <div class="buttons hidden">
+            <button class="young-devyn" onclick="openModal(`stories/young-devyn.html`)">
+              Devyn
+            </button>
+            <button class="natasha" onclick="openModal(`stories/natasha.html`)">
+              Natasha
             </button>
           </div>
         </div>
         <div class="category-container" id="category-two">
-          Artist & Industry
-          <div class="buttons">
-            <button onclick="openModal(`stories/borleone.html`)">
-              Borleone
+          <h2 class="category-title">Industry</h2>
+          <div class="view-cta" onclick="openStories(`#category-two`)">View stories</div>
+          <div class="buttons hidden">
+            <button class="shauna" onclick="openModal(`stories/shauna.html`)">
+              Shauna
             </button>
-            <button onclick="openModal(`stories/shauna-james.html`)">
-              Shauna James
+            <button class="borleone" onclick="openModal(`photogallery.html`)">
+              photogallery
             </button>
           </div>
         </div>
         <div class="category-container" id="category-three">
-          Artist & Community
-          <div class="buttons">
-            <button onclick="openModal(`stories/bill-the-demon.html`)">
+          <h2 class="category-title">Community</h2>
+          <div class="view-cta" onclick="openStories('#category-three')">View stories</div>
+          <div class="buttons hidden">
+            <button class="bill-the-demon" onclick="openModal(`stories/bill-the-demon.html`)">
               BillTheDemon
             </button>
-            <button onclick="openModal(`stories/the-bro-experience.html`)">
-              The B.R.O. Experience
+            <button class="coop" onclick="openModal(`stories/coop.html`)">
+              Coop
             </button>
           </div>
         </div>

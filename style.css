@@ -27,10 +27,10 @@ p {
   0% {
     opacity: 0;
   }
-  20% {
+  10% {
     opacity: 0;
   }
-  30% {
+  20% {
     opacity: 1;
   }
   90% {
@@ -45,10 +45,10 @@ p {
   0% {
     opacity: 0;
   }
-  40% {
+  20% {
     opacity: 0;
   }
-  50% {
+  30% {
     opacity: 1;
   }
   90% {
@@ -63,10 +63,10 @@ p {
   0% {
     opacity: 0;
   }
-  60% {
+  30% {
     opacity: 0;
   }
-  70% {
+  40% {
     opacity: 1;
   }
   90% {
@@ -120,6 +120,11 @@ nav button {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-wrapper {
@@ -131,6 +136,7 @@ nav button {
   left: 0;
   width: 80vw;
   height: 80vh;
+  padding-bottom: 6rem;
   margin: auto;
   border: none;
   outline: none;
@@ -138,20 +144,24 @@ nav button {
 }
 
 .modal-close-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 0.5rem;
-  margin-right: 1.5rem;
+  position: fixed;
+  top: 8vh;
+  right: 12vw;
   padding: 0.25rem;
   font-size: 1.5rem;
   height: 2rem;
   width: 2rem;
   border: none;
   border-radius: 50%;
-  background-color: white;
+  color: #ccc;
+  background-color: #111;
   align-items: center;
   text-align: center;
+}
+.modal-close-button:hover {
+  color: #fff;
+  background: #222;
+  transition: color 0.5s;
 }
 
 .modal iframe {
@@ -171,7 +181,8 @@ nav button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
+  transition: background 1s;
 }
 
 /* ==================== */
@@ -301,13 +312,13 @@ button.play-button {
   opacity: 0;
 }
 .quote-1.play {
-  animation: hide-show-hide-first 8s infinite;
+  animation: hide-show-hide-first 7s infinite;
 }
 .quote-2.play {
-  animation: hide-show-hide-second 8s infinite;
+  animation: hide-show-hide-second 7s infinite;
 }
 .speaker.play {
-  animation: hide-show-hide-third 8s infinite;
+  animation: hide-show-hide-third 7s infinite;
 }
 /* ==================== */
 /* Story list */
@@ -322,34 +333,135 @@ button.play-button {
 }
 
 .category-container {
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid black;
-  /* border-radius: 12px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 2rem 1rem;
   margin: 0;
-  height: fit-content;
+  height: 33.3vh;
+  max-height: 33.3vh;
+  box-sizing: border-box;
 }
 
-#thesis {
-  background-image: url("assets/sample-pics/zero.jpeg");
+.category-container.expanded {
+  min-height: 67.6%;
+  height: 67.6vh;
+  max-height: 67.6vh;
+  transition: height 0.5s;
+}
+
+.category-container:hover .view-cta {
+  display: block;
+}
+
+.category-container.expanded:hover .view-cta {
+  display: none;
+}
+
+.category-title {
+  text-align: center;
 }
 
 #category-one {
+  background: rgba(217, 52, 40, 1);
+}
+/* #category-one:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(191, 110, 65, 1) 0%,
+    rgba(217, 52, 40, 1) 100%
+  );
+} */
+.young-devyn {
   background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.natasha {
+  background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.shauna {
+  background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.borleone {
+  background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.bill-the-demon {
+  background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.coop {
+  background-image: url("assets/sample-pics/one.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.young-devyn:hover,
+.natasha:hover,
+.shauna:hover,
+.borleone:hover,
+.bill-the-demon:hover,
+.coop:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 
 #category-two {
-  background-image: url("assets/sample-pics/two.jpeg");
+  background: #dfc940;
 }
+/* #category-two:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(191, 110, 65, 1) 0%,
+    rgba(223, 201, 64, 1) 100%
+  );
+} */
 
 #category-three {
-  background-image: url("assets/sample-pics/three.jpeg");
+  background: #664745;
+}
+/* #category-three:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(191, 110, 65, 1) 0%,
+    rgba(102, 71, 69, 1) 100%
+  );
+} */
+
+.view-cta {
+  display: none;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 0 auto;
 }
 
 .story-list .buttons {
   display: flex;
   flex: 1;
+}
+
+.story-list .buttons.hidden {
+  display: none;
 }
 .story-list button {
   flex: 1;
@@ -360,6 +472,15 @@ button.play-button {
 }
 
 /* Video story page */
+
+.story-modal {
+  padding: 0 4rem;
+}
+.story-modal p {
+  font-family: "Arvo", Arial;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
 
 .story-title {
   padding: 0 2rem;
@@ -384,6 +505,38 @@ button.play-button {
   height: 100%;
 }
 
+.bottom-of-article-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links h4 {
+  margin-bottom: 0;
+}
+.social-links .icon-row a {
+  color: #ccc;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.social-links .icon-row a:hover {
+  color: white;
+}
+
+a.next-story-link {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #111;
+  border-radius: 0.5rem;
+}
+a.next-story-link i {
+  font-size: 1rem;
+}
+a.next-story-link:hover {
+  color: #fff;
+  background: #222;
+}
 /* About Page */
 
 .about-header {
@@ -682,6 +835,12 @@ blockquote {
     left: 0;
     width: 100vw;
     height: 92vh;
+  }
+
+  /* Story list */
+
+  .story-list .buttons {
+    flex-direction: column;
   }
 
   .bio-grid {

@@ -1,42 +1,103 @@
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Photo Gallery</title>
-<!--     <link name="photo source" href='https://www.flickr.com/photos/195364631@N05/with/51995838299'/> -->
-<link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Photo Gallery</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <style>
+    .audio-player {
+      z-index: 1;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #222;
+      padding: 1rem;
+    }
+    audio::-webkit-media-controls-panel {
+      background:#999;
+    }
+    /* audio::-webkit-media-controls-mute-button,
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-timeline-container,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+      color: #fff;
+      box-shadow: none;
+    } */
+    .photo-section {
+      display: flex;
+      height: 250vh;
+      box-sizing: border-box;
+    }
+    .last {
+      height: fit-content;
+    }
+    .photo-section h2 {
+      margin-top: 100vh;
+      padding: 0 8rem;
+    }
+    .photo-section .bottom-of-article-row {
+      padding: 0 8rem;
+      bottom: 0;
+    }
+    img.photo-card {
+      width: 50vw;
+      height: 100vh;;
+      object-fit: cover;
+      position: sticky;
+      top: 0;
+    }
+  </style>
 </head>
 <body>
-<div class="mainheader">Coach Coop</div>
-<div class="menu-overlay">
-  <div class="container">
-   <div class="row">   
-   </div>   
-  </div>
-<div class="main-photogallery">
-  <div class="container">
+  <main class="multimedia-page-wrapper">
+    <div class="audio-player">
+      <audio controls autoplay>
+        <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="photo-section">
+      <div class="special-case-text">
+        <div class="page-title">
+          <h1 style="text-align:center;margin-top: 20vh;">Optional page title: would go nice here</h1>
+          <p style="text-align:center;"">Tagline</p>
+        </div>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+      </div>
       <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      <img class="photo-card" src="assets/coach-coop/cc2.jpg"/>
-      <img class="photo-card" src="assets/coach-coop/cc3.jpg"/> 
-      <img class="photo-card" src="assets/coach-coop/cc4.jpg"/>
-      <img class="photo-card" src="assets/coach-coop/cc5.jpg"/>
-  </div>
-</div> 
-  
- 
-
-
-  
-</div> 
-
-
-  
+    </div>
+    <div class="photo-section">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+    </div>
+    <div class="photo-section">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+    </div>
+    <div class="photo-section">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+    </div>
+    <div class="photo-section last">
+      <div class="special-case-text" style="padding-bottom:8rem;">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+        <div class="bottom-of-article-row" style="display: flex;width:100%;box-sizing: border-box;padding-top: 16rem;">
+          <div class="social-links">
+            <h4>More about {name}</h4>
+            <div class="icon-row">
+              <a href="https://twitter.com/" target="_blank"><i class="ph-twitter-logo"></i></a>
+              <a href="https://tiktok.com/" target="_blank"><i class="ph-tiktok-logo"></i></a>
+            </div>
+          </div>
+          <a class="next-story-link" href="/stories/borleone.html">
+            Next story <i class="ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+    </div>
+  </main>
 </body>
-
-
-
-
-
-
-  
 </html>
