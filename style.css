@@ -243,14 +243,14 @@ nav button {
   color: #ffffff;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  text-shadow: 0 0 7px #fff,
-  0 0 10px #fff,
-  0 0 21px #fff,
-  0 0 42px #ef3b3b,
-  0 0 82px #ef3b3b,
-  0 0 92px #ef3b3b,
-  0 0 102px #ef3b3b,
-  0 0 151px #ef3b3b;
+  text-shadow: 0 0 7px #000000,
+  0 0 10px #000000,
+  0 0 21px #000000,
+  0 0 42px #000000,
+  0 0 82px #000000,
+  0 0 92px #000000,
+  0 0 102px #000000,
+  0 0 151px #000000;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -494,9 +494,9 @@ button.play-button {
   padding: 0 4rem;
 }
 .story-modal p {
-  font-family: "Arvo", Arial;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 2rem;
+  text-align: justify;
 }
 
 .story-title {
