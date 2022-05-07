@@ -4,12 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Drill Down</title>
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    /> -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Glitch&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap"
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -49,15 +45,15 @@
         <div class="title-text">
           <h1>Drill Down</h1>
           <div class="section-links">
-            <h4>Artist |</h4>
-            <h4>&nbsp;Industry |</h4>
-            <h4>&nbsp;Community</h4>
+            <h4>Artist&nbsp;&nbsp;|&nbsp;</h4>
+            <h4>&nbsp;Industry&nbsp;&nbsp;|</h4>
+            <h4>&nbsp;&nbsp;Community</h4>
           </div>
         </div>
         <button class="play-button" onclick="startIntro()">Start</button>
         <img
           class="site-hero-image"
-          src="assets/landing-page/drillDownCoverArt.png"
+          src="assets/landing-page/desktopimage0.png"
         />
       </div>
 
@@ -72,6 +68,13 @@
           class="adams"
         >
           <!-- <source src="assets/landing-page/desktop-video0.mp4" type="video/mp4" /> -->
+          <!-- <track
+            src="/assets/landing-page/coachCoopCaptions.vtt"
+            label="English"
+            kind="captions"
+            srclang="en-us"
+            default
+          /> -->
           Your browser does not support the video tag.
         </video>
       </div>
@@ -104,11 +107,13 @@
       <div class="immersive-intro-section image-and-text" id="devyn">
         <img src="assets/sample-pics/one.jpeg" />
         <div class="accompanying-text">
-          <h1 class="quote-1">"Every time you hear me rap, I always say Booklyn, Trinidad...</h1>
+          <h1 class="quote-1">
+            "Every time you hear me rap, I always say Brooklyn/Trinidad...
+          </h1>
           <h1 class="quote-2">People make that a meme."</h1>
           <div class="speaker">
             <h3 class="name">- Young Devyn,</h3>
-            <h3>Recording artist</h3>
+            <h3>Recording Artist</h3>
           </div>
         </div>
       </div>
@@ -116,7 +121,9 @@
       <div class="immersive-intro-section image-and-text" id="borleone">
         <img src="assets/sample-pics/two.jpeg" />
         <div class="accompanying-text">
-          <h1 class="quote-1">"Without videography and the ties to music...</h1>
+          <h1 class="quote-1">
+            "Without videography and the ties into music...
+          </h1>
           <h1 class="quote-2">I don't know where I'd be."</h1>
           <div class="speaker">
             <h3 class="name">- Borleone,</h3>
@@ -128,7 +135,9 @@
       <div class="immersive-intro-section image-and-text" id="shauna">
         <img src="assets/sample-pics/three.jpeg" />
         <div class="accompanying-text">
-          <h1 class="quote-1">"Before all this music shit, I'm really from Brooklyn...</h1>
+          <h1 class="quote-1">
+            "Before all this music shit, I'm really from Brooklyn...
+          </h1>
           <h1 class="quote-2">Like I was really outside."</h1>
           <div class="speaker">
             <h3 class="name">- Shauna James,</h3>
@@ -140,7 +149,9 @@
       <div class="immersive-intro-section image-and-text" id="bill">
         <img src="assets/sample-pics/six.jpeg" />
         <div class="accompanying-text">
-          <h1 class="quote-1">"I don't care what people think about my music...</h1>
+          <h1 class="quote-1">
+            "I don't care what people think about my music...
+          </h1>
           <h1 class="quote-2">I just care what they think about me."</h1>
           <div class="speaker">
             <h3 class="name">- BillTheDemon,</h3>
@@ -151,10 +162,15 @@
 
       <div class="story-list">
         <div class="category-container" id="category-one">
-          <h2 class="category-title">Artist</h2>
-          <div class="view-cta" onclick="openStories(`#category-one`)">View stories</div>
+          <h2 class="category-title">Artist & Family</h2>
+          <div class="view-cta" onclick="openStories(`#category-one`)">
+            View stories
+          </div>
           <div class="buttons hidden">
-            <button class="young-devyn" onclick="openModal(`stories/young-devyn.html`)">
+            <button
+              class="young-devyn"
+              onclick="openModal(`stories/young-devyn.html`)"
+            >
               Devyn
             </button>
             <button class="natasha" onclick="openModal(`stories/natasha.html`)">
@@ -163,8 +179,10 @@
           </div>
         </div>
         <div class="category-container" id="category-two">
-          <h2 class="category-title">Industry</h2>
-          <div class="view-cta" onclick="openStories(`#category-two`)">View stories</div>
+          <h2 class="category-title">Artist & Industry</h2>
+          <div class="view-cta" onclick="openStories(`#category-two`)">
+            View stories
+          </div>
           <div class="buttons hidden">
             <button class="shauna" onclick="openModal(`stories/shauna.html`)">
               Shauna
@@ -175,10 +193,15 @@
           </div>
         </div>
         <div class="category-container" id="category-three">
-          <h2 class="category-title">Community</h2>
-          <div class="view-cta" onclick="openStories('#category-three')">View stories</div>
+          <h2 class="category-title">Artist & Community</h2>
+          <div class="view-cta" onclick="openStories('#category-three')">
+            View stories
+          </div>
           <div class="buttons hidden">
-            <button class="bill-the-demon" onclick="openModal(`stories/bill-the-demon.html`)">
+            <button
+              class="bill-the-demon"
+              onclick="openModal(`stories/bill-the-demon.html`)"
+            >
               BillTheDemon
             </button>
             <button class="coop" onclick="openModal(`stories/coop.html`)">

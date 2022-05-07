@@ -1,5 +1,5 @@
 body {
-  font-family: "Arvo", serif;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
   color: #eeeeee;
   background: #010101;
@@ -8,7 +8,7 @@ body {
 }
 
 p {
-  font-family: "Arvo", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .hidden {
@@ -237,13 +237,22 @@ nav button {
 }
 
 .title-text h1 {
-  font-family: "Rubik Glitch", cursive;
-  font-size: 6rem;
-  font-weight: 100;
-  color: black;
-  -webkit-text-fill-color: white;
+  font-family: "Staatliches", cursive;
+  font-size: 7rem;
+  font-weight: 300;
+  color: #ffffff;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  text-shadow: 0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #ef3b3b,
+  0 0 82px #ef3b3b,
+  0 0 92px #ef3b3b,
+  0 0 102px #ef3b3b,
+  0 0 151px #ef3b3b;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .title-text .section-links {
@@ -251,10 +260,18 @@ nav button {
   justify-content: center;
 }
 
+.title-text h4 {
+  font-family: "Staatliches", cursive;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+  margin-top: 0;
+}
+
 button.play-button {
   z-index: 1;
   position: absolute;
-  bottom: 20vh;
+  bottom: 5vh;
   right: 0;
   left: 0;
   width: 140px;
@@ -293,12 +310,12 @@ button.play-button {
 }
 
 .image-and-text .accompanying-text h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 400;
 }
 
 .image-and-text .accompanying-text h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin: 0;
 }
