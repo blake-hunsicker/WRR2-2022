@@ -352,46 +352,53 @@ button.play-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   margin: 0;
   height: 33.3vh;
   max-height: 33.3vh;
   box-sizing: border-box;
 }
 
+.category-container.minimized {
+  min-height: 20%;
+  height: 20vh;
+  max-height: 20vh;
+  transition: min-height 0.2s, height 0.2s, max-height 0.2s;
+  box-sizing: border-box;
+}
+
 .category-container.expanded {
-  min-height: 67.6%;
-  height: 67.6vh;
-  max-height: 67.6vh;
-  transition: height 0.5s;
-}
-
-.category-container:hover .view-cta {
-  display: block;
-}
-
-.category-container.expanded:hover .view-cta {
-  display: none;
+  min-height: 60%;
+  height: 60vh;
+  max-height: 60vh;
+  transition: min-height 0.2s, height 0.2s, max-height 0.2s;
+  box-sizing: border-box;
 }
 
 .category-title {
   font-family: "Staatliches", cursive;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.4rem;
   letter-spacing: 1.5px;
   font-weight: 300;
 }
+.category-title:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+}
 
-#category-one {
+#category0 {
   background: rgba(217, 52, 40, 1);
 }
-/* #category-one:hover {
-  background: linear-gradient(
-    0deg,
-    rgba(191, 110, 65, 1) 0%,
-    rgba(217, 52, 40, 1) 100%
-  );
-} */
+
+#category1 {
+  background: #dfc940;
+}
+
+#category2 {
+  background: #664745;
+}
+
 .young-devyn {
   background-image: url("assets/sample-pics/one.jpeg");
   background-repeat: no-repeat;
@@ -399,12 +406,7 @@ button.play-button {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-/* .natasha {
-  background-image: url("assets/sample-pics/one.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-/* } */
+
 .shauna {
   background-image: url("assets/sample-pics/one.jpeg");
   background-repeat: no-repeat;
@@ -412,6 +414,7 @@ button.play-button {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+
 .borleone {
   background-image: url("assets/story-menu/borleone.jpg");
   background-repeat: no-repeat;
@@ -419,6 +422,7 @@ button.play-button {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+
 .bill-the-demon {
   background-image: url("assets/sample-pics/one.jpeg");
   background-repeat: no-repeat;
@@ -426,6 +430,7 @@ button.play-button {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+
 .coop {
   background-image: url("assets/sample-pics/one.jpeg");
   background-repeat: no-repeat;
@@ -433,6 +438,7 @@ button.play-button {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+
 .young-devyn:hover,
 .natasha:hover,
 .shauna:hover,
@@ -443,37 +449,6 @@ button.play-button {
   filter: grayscale(0%);
 }
 
-#category-two {
-  background: #dfc940;
-}
-/* #category-two:hover {
-  background: linear-gradient(
-    0deg,
-    rgba(191, 110, 65, 1) 0%,
-    rgba(223, 201, 64, 1) 100%
-  );
-} */
-
-#category-three {
-  background: #664745;
-}
-/* #category-three:hover {
-  background: linear-gradient(
-    0deg,
-    rgba(191, 110, 65, 1) 0%,
-    rgba(102, 71, 69, 1) 100%
-  );
-} */
-
-.view-cta {
-  display: none;
-  width: fit-content;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin: 0 auto;
-}
-
 .story-list .buttons {
   display: flex;
   flex: 1;
@@ -482,6 +457,7 @@ button.play-button {
 .story-list .buttons.hidden {
   display: none;
 }
+
 .story-list button {
   font-family: "Poppins", sans-serif;
   font-size: 1.75rem;

@@ -98,7 +98,7 @@ function imageScroll() {
   }
 }
 
-// Autoshow video video
+// Autoshow video
 
 mainContainer.addEventListener('load', videoScroll);
 mainContainer.addEventListener('scroll', videoScroll);
@@ -136,11 +136,31 @@ function videoScroll() {
 // Expand and collapse sections
 
 function openStories(category) {
-  console.log(category);
+  // console.log(category);
   const categoryContainer = document.querySelector(category);
 
   // Expand category section
   categoryContainer.classList.add('expanded');
+
+  const allCategories = document.querySelectorAll('.category-container');
+
+  let i;
+
+  for (i=0; i < allCategories.length; i++) {
+    const categoryID = `#${allCategories[i].id}`;
+    console.log(categoryID);
+    const categoryToJudge = document.querySelector(categoryID)
+    if (category != categoryID) {
+      categoryToJudge.classList.add('minimized');
+      categoryToJudge.classList.remove('expanded');
+      categoryToJudge.querySelector('.buttons').classList.add('hidden');
+    } else {
+      categoryToJudge.classList.remove('minimized');
+    }
+  }
+
+  // Minimize other sections
+
 
   // Show story buttons
   const buttons = categoryContainer.querySelector('.buttons');
