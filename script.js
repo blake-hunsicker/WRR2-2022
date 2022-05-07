@@ -11,6 +11,12 @@ function setVideoSize() {
   const videos = document.querySelectorAll('video');
 
   if (w.matches) {
+    const siteHeroImage = document.querySelector('.site-hero-image');
+    siteHeroImage.removeAttribute('src');
+    siteHeroImage.setAttribute('src','../assets/landing-page/mobileimage0.png')
+  }
+
+  if (w.matches) {
     let i = 0;
   
     for (i; i < videos.length; i++) {
