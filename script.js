@@ -139,32 +139,34 @@ function openStories(category) {
   // console.log(category);
   const categoryContainer = document.querySelector(category);
 
-  // Expand category section
-  categoryContainer.classList.add('expanded');
+  if (categoryContainer.classList.contains('expanded')) {
+    return;
+  } else {
+    // Expand category section
+    categoryContainer.classList.add('expanded');
 
-  const allCategories = document.querySelectorAll('.category-container');
+    const allCategories = document.querySelectorAll('.category-container');
 
-  let i;
+    let i;
 
-  for (i=0; i < allCategories.length; i++) {
-    const categoryID = `#${allCategories[i].id}`;
-    console.log(categoryID);
-    const categoryToJudge = document.querySelector(categoryID)
-    if (category != categoryID) {
-      categoryToJudge.classList.add('minimized');
-      categoryToJudge.classList.remove('expanded');
-      categoryToJudge.querySelector('.buttons').classList.add('hidden');
-    } else {
-      categoryToJudge.classList.remove('minimized');
+    for (i=0; i < allCategories.length; i++) {
+      const categoryID = `#${allCategories[i].id}`;
+      console.log(categoryID);
+      const categoryToJudge = document.querySelector(categoryID)
+      if (category != categoryID) {
+        categoryToJudge.classList.add('minimized');
+        categoryToJudge.classList.remove('expanded');
+        categoryToJudge.querySelector('.buttons').classList.add('hidden');
+      } else {
+        categoryToJudge.classList.remove('minimized');
+      }
     }
+
+
+    // Show story buttons
+    const buttons = categoryContainer.querySelector('.buttons');
+    buttons.classList.toggle('hidden');
   }
-
-  // Minimize other sections
-
-
-  // Show story buttons
-  const buttons = categoryContainer.querySelector('.buttons');
-  buttons.classList.toggle('hidden');
 }
 
 // Open modal
