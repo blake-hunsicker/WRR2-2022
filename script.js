@@ -21,7 +21,7 @@ function setVideoSize() {
   
       const source = document.createElement('source');
       source.setAttribute('type', 'video/mp4');
-      source.setAttribute('src', `assets/landing-page/mobile-video${i}.mp4`);
+      source.setAttribute('src', `https://wrr2-2022.s3.amazonaws.com/mobile-video${i}.mp4`);
       videos[i].prepend(source);
     }
 
@@ -39,7 +39,7 @@ function setVideoSize() {
   
       const source = document.createElement('source');
       source.setAttribute('type', 'video/mp4');
-      source.setAttribute('src', `assets/landing-page/desktop-video${i}.mp4`);
+      source.setAttribute('src', `https://wrr2-2022.s3.amazonaws.com/desktop-video${i}.mp4`);
       videos[i].appendChild(source);
     }
   
