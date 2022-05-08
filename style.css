@@ -473,7 +473,7 @@ button.play-button {
 /* ======================== */
 
 .story-modal {
-  padding: 0;
+  padding: 0 0 2rem;
 }
 
 .story-body {
