@@ -136,8 +136,7 @@ nav button {
   bottom: 0;
   left: 0;
   width: 80vw;
-  height: 80vh;
-  padding-bottom: 6rem;
+  height: 90vh;
   margin: auto;
   border: none;
   outline: none;
@@ -469,26 +468,32 @@ button.play-button {
   margin: 0.6rem 1rem;
 }
 
+/* ======================== */
 /* Video story page */
+/* ======================== */
 
 .story-modal {
-  padding: 0 4rem;
+  padding: 0;
 }
-.story-modal p {
+
+.story-body {
+  margin: 4rem 20vw;
+}
+.story-body p {
   font-size: 1rem;
   margin-top: 2rem;
   text-align: justify;
 }
 
-.story-title {
-  padding: 0 2rem;
+.story-body .story-title {
+  padding: 0;
 }
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
   /* padding-bottom: 62.5%; - 16:10 aspect ratio */
   /* padding-bottom: 75%; - 4:3 aspect ratio */
-  padding-top: 30px;
   height: 0;
   overflow: hidden;
 }
@@ -507,14 +512,16 @@ button.play-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem;
+  padding: 0.5rem 0 0;
+  border-top: 1px solid #222;
+  margin: 4rem 0;
 }
 
 .social-links h4 {
   margin-bottom: 0;
 }
 .social-links .icon-row a {
-  color: #ccc;
+  color: #999;
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -526,7 +533,7 @@ a.next-story-link {
   color: #ccc;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #111;
+  background: #222;
   border-radius: 0.5rem;
 }
 a.next-story-link i {
@@ -534,7 +541,7 @@ a.next-story-link i {
 }
 a.next-story-link:hover {
   color: #fff;
-  background: #222;
+  background: #555;
 }
 /* About Page */
 
@@ -819,16 +826,15 @@ blockquote {
   /* Modal */
 
   .modal-wrapper {
-    top: 10px;
+    top: 8vh;
     width: 100vw;
-    height: 90vh;
-    top: 10vh;
+    height: 92vh;
   }
 
   .modal iframe {
     z-index: 3;
     position: absolute;
-    top: 8vh;
+    top: 10;
     right: 0;
     bottom: 0;
     left: 0;
@@ -840,6 +846,12 @@ blockquote {
 
   .story-list .buttons {
     flex-direction: column;
+  }
+
+  /* Modal story */
+
+  .story-body {
+    margin: 0 1rem 14rem;
   }
 
   .bio-grid {
