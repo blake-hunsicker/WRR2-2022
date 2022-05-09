@@ -13,7 +13,6 @@
   </head>
 
   <body>
-
     <div class="modal hidden">
       <div class="modal-wrapper">
         <div class="modal-nav">
@@ -60,6 +59,12 @@
           playsinline
           loop
         >
+          <track
+            src="/assets/landing-page/adamsTrailerCaptions.vtt"
+            label="English"
+            kind="captions"
+            srclang="en-us"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -91,7 +96,7 @@
           </h1>
           <h1 class="quote-2">People make that a meme."</h1>
           <div class="speaker">
-            <h3 class="name">- Young Devyn,</h3>
+            <h3 class="name">Young Devyn,</h3>
             <h3>Recording Artist</h3>
           </div>
         </div>
@@ -105,7 +110,7 @@
           </h1>
           <h1 class="quote-2">I don't know where I'd be."</h1>
           <div class="speaker">
-            <h3 class="name">- Borleone,</h3>
+            <h3 class="name">Borleone,</h3>
             <h3>Music Video Producer</h3>
           </div>
         </div>
@@ -119,7 +124,7 @@
           </h1>
           <h1 class="quote-2">Like I was really outside."</h1>
           <div class="speaker">
-            <h3 class="name">- Shauna James,</h3>
+            <h3 class="name">Shauna James,</h3>
             <h3>Music Marketing Manager</h3>
           </div>
         </div>
@@ -133,7 +138,7 @@
           </h1>
           <h1 class="quote-2">I just care what they think about me."</h1>
           <div class="speaker">
-            <h3 class="name">- BillTheDemon,</h3>
+            <h3 class="name">BillTheDemon,</h3>
             <h3>Drill Rapper</h3>
           </div>
         </div>
@@ -141,7 +146,9 @@
 
       <div class="story-list">
         <div class="category-container" id="category0">
-          <h2 class="category-title" onclick="openStories(`#category0`)">Artist & Family</h2>
+          <h2 class="category-title" onclick="openStories(`#category0`)">
+            Artist & Family
+          </h2>
           <div class="buttons hidden">
             <button
               class="young-devyn"
@@ -152,7 +159,9 @@
           </div>
         </div>
         <div class="category-container" id="category1">
-          <h2 class="category-title" onclick="openStories(`#category1`)">Artist & Industry</h2>
+          <h2 class="category-title" onclick="openStories(`#category1`)">
+            Artist & Industry
+          </h2>
           <div class="buttons hidden">
             <button class="shauna" onclick="openModal(`stories/shauna.html`)">
               Shauna James
@@ -166,7 +175,9 @@
           </div>
         </div>
         <div class="category-container" id="category2">
-          <h2 class="category-title" onclick="openStories('#category2')">Artist & Community</h2>
+          <h2 class="category-title" onclick="openStories('#category2')">
+            Artist & Community
+          </h2>
           <div class="buttons hidden">
             <button
               class="bill-the-demon"
@@ -175,7 +186,7 @@
               BillTheDemon
             </button>
             <button class="coop" onclick="openModal(`photogallery.html`)">
-              The B.R.O Experience
+              The B.R.O. Experience
             </button>
           </div>
         </div>
