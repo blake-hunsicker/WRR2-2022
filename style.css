@@ -438,7 +438,7 @@ button.play-button:hover {
 }
 
 .shauna {
-  background-image: url("assets/sample-pics/one.jpeg");
+  background-image: url("assets/story-menu/shauna.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
