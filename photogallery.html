@@ -18,14 +18,6 @@
     audio::-webkit-media-controls-panel {
       background:#999;
     }
-    /* audio::-webkit-media-controls-mute-button,
-    audio::-webkit-media-controls-play-button,
-    audio::-webkit-media-controls-timeline-container,
-    audio::-webkit-media-controls-current-time-display,
-    audio::-webkit-media-controls-time-remaining-display {
-      color: #fff;
-      box-shadow: none;
-    } */
     .photo-section {
       display: flex;
       height: 250vh;
@@ -34,56 +26,140 @@
     .last {
       height: fit-content;
     }
-    .photo-section h2 {
+    .story-text {
       margin-top: 100vh;
       padding: 0 8rem;
     }
-    .photo-section .bottom-of-article-row {
-      padding: 0 8rem;
-      bottom: 0;
-    }
-    img.photo-card {
-      width: 50vw;
-      height: 100vh;;
-      object-fit: cover;
+    .photo {
       position: sticky;
       top: 0;
+      width: 50vw;
+      height: 100vh;
+    } 
+    img.photo-card {
+      width: 50vw;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bottom-of-article-row {
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: 599px) {
+      .page-title {
+        color: #010101;
+      }
+      .photo-section {
+        flex-direction: column-reverse;
+      }
+      .photo {
+        z-index: 1;
+        width: 100vw;
+      }
+      img.photo-card {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+      .special-case-text {
+        z-index: 2;
+      }
+      .story-text {
+        z-index: 2;
+        margin-top: 100vh;
+        padding: 1rem 1rem 1rem;
+        border-radius: 1rem;
+        background: rgba(0,0,0,0.8);
+        margin-bottom: 100vh;
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
+      .story-text h2 {
+        margin: 0 0 1rem;
+      }
+
+      .bottom-of-article-row {
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        background: #010101;
+        margin: 0;
+      }
     }
   </style>
 </head>
 <body>
   <main class="multimedia-page-wrapper">
-    <div class="audio-player">
-      <audio controls autoplay>
-        <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-      </audio>
-    </div>
+
     <div class="photo-section">
       <div class="special-case-text">
         <div class="page-title">
           <h1 style="text-align:center;margin-top: 20vh;">Optional page title: would go nice here</h1>
           <p style="text-align:center;"">Tagline</p>
         </div>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+        <div class="story-text">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+          <audio controls>
+            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
-      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      <div class="photo">
+        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      </div>
     </div>
+
     <div class="photo-section">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-    </div>
-    <div class="photo-section">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-    </div>
-    <div class="photo-section">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-    </div>
-    <div class="photo-section last">
-      <div class="special-case-text" style="padding-bottom:8rem;">
+      <div class="story-text">
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-        <div class="bottom-of-article-row" style="display: flex;width:100%;box-sizing: border-box;padding-top: 16rem;">
+        <audio controls>
+          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="photo">
+        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      </div>
+    </div>
+
+    <div class="photo-section">
+      <div class="story-text">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+        <audio controls>
+          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="photo">
+        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      </div>
+    </div>
+
+    <div class="photo-section">
+      <div class="story-text">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+        <audio controls>
+          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="photo">
+        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      </div>
+    </div>
+
+    <div class="photo-section last">
+      <div class="special-case-text">
+        <div class="story-text">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
+          <audio controls>
+            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="bottom-of-article-row">
           <div class="social-links">
             <h4>More about {name}</h4>
             <div class="icon-row">
@@ -96,8 +172,11 @@
           </a>
         </div>
       </div>
-      <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      <div class="photo">
+        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
+      </div>
     </div>
+
   </main>
 </body>
 </html>
