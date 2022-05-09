@@ -316,6 +316,7 @@ button.play-button {
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0;
+  text-align: right;
 }
 
 .image-and-text .accompanying-text h3.name {
@@ -388,15 +389,15 @@ button.play-button {
 }
 
 #category0 {
-  background: rgba(217, 52, 40, 1);
+  background: #AA4A44;
 }
 
 #category1 {
-  background: #dfc940;
+  background: #8f2f39;
 }
 
 #category2 {
-  background: #664745;
+  background: #62262c;
 }
 
 .young-devyn {
