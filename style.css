@@ -82,7 +82,7 @@ p {
 /* ==================================== */
 
 nav {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   top: 0;
   right: 0;
@@ -123,7 +123,7 @@ nav button:hover {
 /* ==================== */
 
 .modal {
-  z-index: 3;
+  z-index: 4;
   position: fixed;
   top: 0;
   right: 0;
@@ -211,6 +211,8 @@ nav button:hover {
 }
 
 .immersive-intro-section {
+  z-index: 4;
+  background: #010101;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -239,6 +241,10 @@ nav button:hover {
 /* ==================== */
 /* Title */
 /* ==================== */
+
+.title-section {
+  z-index: 2;
+}
 
 .title-text {
   z-index: 1;
@@ -286,8 +292,8 @@ button.play-button {
   bottom: 5vh;
   right: 0;
   left: 0;
-  width: 240px;
-  padding: 1.5rem 1rem;
+  width: 200px;
+  padding: 1rem 1rem;
   outline: none;
   border: 1px solid #444;
   border-radius: 0.5rem;
@@ -595,6 +601,12 @@ a.next-story-link:hover {
   column-span: 1;
   padding: 1rem;
 }
+.bio-card:hover .bio-card-inner .bio-card-front .bio-image-wrapper {
+  display: none;
+}
+.bio-card:hover .bio-card-inner .bio-card-back {
+  display: block;
+}
 .bio-card-inner {
   position: relative;
   width: 100%;
@@ -602,6 +614,7 @@ a.next-story-link:hover {
   transition: transform 0.7s;
   transform-style: preserve-3d;
   border-radius: 12px;
+  border: 1px solid #222;
 }
 
 .bio-card-front,
@@ -653,7 +666,13 @@ a.next-story-link:hover {
   margin: 0;
 }
 
+.bio-card-back {
+  display: none;
+  padding: 0.5rem 1rem;
+}
+
 .bio-card-back p {
+  color: #eee;
   padding: 0 0.25rem;
   margin-bottom: 0;
 }
@@ -663,7 +682,10 @@ a.next-story-link:hover {
 .social-link {
   text-decoration: none;
   margin-right: 0.5rem;
-  color: #eee;
+  color: #999;
+}
+.social-link:hover {
+  color: #fff;
 }
 
 i {
