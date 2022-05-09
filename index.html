@@ -13,20 +13,14 @@
   </head>
 
   <body>
-    <!-- <div class="intro-modal">
-      <div class="intro-modal-wrapper">
-        <h3 onclick="closeIntroModal()">The user needs to click or tap the page or else Chrome will block video autoplay</h3>
-        <p>Let's use a dismissable modal to introduce the project, or come up with some other way to get the user to click before scrolling</p>
-      </div>
-      <div class="dark-overlay" onclick="closeIntroModal()"></div>
-    </div> -->
 
     <div class="modal hidden">
       <div class="modal-wrapper">
-        <button class="modal-close-button" onclick="closeModal()">
-          &times;
-        </button>
-        <!-- <iframe src="url" class="modal-iframe" scrolling="yes"></iframe> -->
+        <div class="modal-nav">
+          <button class="modal-close-button" onclick="closeModal()">
+            &times;
+          </button>
+        </div>
       </div>
       <div class="dark-overlay" onclick="closeModal()"></div>
     </div>
