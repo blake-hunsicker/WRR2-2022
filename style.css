@@ -593,6 +593,15 @@ a.next-story-link:hover {
   padding: 2rem 2rem 0;
 }
 
+.about-header h2 {
+  font-family: 'Staatliches', cursive;
+}
+
+.about-header p {
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
+
 .bio-grid {
   margin: 0 auto;
   display: grid;
@@ -628,6 +637,11 @@ a.next-story-link:hover {
   color: #eee;
   overflow: hidden;
 }
+
+.bio-card-back p {
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
 .hidden {
   display: none;
 }
@@ -659,6 +673,7 @@ a.next-story-link:hover {
   box-sizing: border-box;
 }
 .bio-text {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 .bio-title h3 {
