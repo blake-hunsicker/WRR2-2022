@@ -17,6 +17,9 @@ function setVideoSize() {
   }
 
   if (w.matches) {
+
+    videos[1].setAttribute('poster', '../assets/landing-page/coopCoverPhoto.jpg');
+    
     let i = 0;
   
     for (i; i < videos.length; i++) {
@@ -62,6 +65,9 @@ function startIntro() {
   const adamsVideo = document.querySelector('#adams-video');
   adamsVideo.scrollIntoView({behavior: 'smooth'});
   adamsVideo.querySelector('video').play();
+
+  const navbar = document.querySelector('nav');
+  navbar.classList.add('hidden')
 }
 
 // Auto add/hide image accompanying text animation
