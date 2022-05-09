@@ -425,7 +425,7 @@ button.play-button {
 }
 
 .bill-the-demon {
-  background-image: url("assets/sample-pics/one.jpeg");
+  background-image: url("assets/story-menu/bill-the-demon.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -433,7 +433,7 @@ button.play-button {
 }
 
 .coop {
-  background-image: url("assets/sample-pics/one.jpeg");
+  background-image: url("assets/story-menu/bro-experience.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
