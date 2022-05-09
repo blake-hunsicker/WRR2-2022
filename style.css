@@ -95,7 +95,9 @@ nav {
 }
 
 nav h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Staatliches", cursive;
+  font-size: 1em;
+  letter-spacing: 1.5px;
   margin: 0;
 }
 
@@ -103,6 +105,7 @@ nav button {
   color: #eee;
   font-family: "Staatliches", cursive;
   font-size: 1rem;
+  letter-spacing: 1px;
   height: fit-content;
   background: none;
   padding: 0.5rem;
