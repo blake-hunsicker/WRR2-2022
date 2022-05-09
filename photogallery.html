@@ -1,182 +1,201 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Photo Gallery</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="https://unpkg.com/phosphor-icons"></script>
-  <style>
-    .audio-player {
-      z-index: 1;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #222;
-      padding: 1rem;
-    }
-    audio::-webkit-media-controls-panel {
-      background:#999;
-    }
-    .photo-section {
-      display: flex;
-      height: 250vh;
-      box-sizing: border-box;
-    }
-    .last {
-      height: fit-content;
-    }
-    .story-text {
-      margin-top: 100vh;
-      padding: 0 8rem;
-    }
-    .photo {
-      position: sticky;
-      top: 0;
-      width: 50vw;
-      height: 100vh;
-    } 
-    img.photo-card {
-      width: 50vw;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bottom-of-article-row {
-      bottom: 0;
-      display: flex;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 1rem;
-    }
-
-    @media screen and (max-width: 599px) {
-      .page-title {
-        color: #010101;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Drill Down - The B.R.O. Experience</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <style>
+      .audio-player {
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #222;
+        padding: 1rem;
+      }
+      audio::-webkit-media-controls-panel {
+        background: #999;
       }
       .photo-section {
-        flex-direction: column-reverse;
+        display: flex;
+        height: 250vh;
+        box-sizing: border-box;
       }
-      .photo {
-        z-index: 1;
-        width: 100vw;
-      }
-      img.photo-card {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-      }
-      .special-case-text {
-        z-index: 2;
+      .last {
+        height: fit-content;
       }
       .story-text {
-        z-index: 2;
         margin-top: 100vh;
-        padding: 1rem 1rem 1rem;
-        border-radius: 1rem;
-        background: rgba(0,0,0,0.8);
-        margin-bottom: 100vh;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        padding: 0 8rem;
       }
-      .story-text h2 {
-        margin: 0 0 1rem;
+      .photo {
+        position: sticky;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
       }
-
+      img.photo-card {
+        width: 50vw;
+        height: 100%;
+        object-fit: cover;
+      }
       .bottom-of-article-row {
         bottom: 0;
         display: flex;
         width: 100%;
         box-sizing: border-box;
         padding: 1rem;
-        background: #010101;
-        margin: 0;
       }
-    }
-  </style>
-</head>
-<body>
-  <main class="multimedia-page-wrapper">
 
-    <div class="photo-section">
-      <div class="special-case-text">
-        <div class="page-title">
-          <h1 style="text-align:center;margin-top: 20vh;">Optional page title: would go nice here</h1>
-          <p style="text-align:center;"">Tagline</p>
-        </div>
-        <div class="story-text">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-          <audio controls>
-            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-      </div>
-      <div class="photo">
-        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      </div>
-    </div>
+      @media screen and (max-width: 599px) {
+        .page-title {
+          color: #010101;
+        }
+        .photo-section {
+          flex-direction: column-reverse;
+        }
+        .photo {
+          z-index: 1;
+          width: 100vw;
+        }
+        img.photo-card {
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+        }
+        .special-case-text {
+          z-index: 2;
+        }
+        .story-text {
+          z-index: 2;
+          margin-top: 100vh;
+          padding: 1rem 1rem 1rem;
+          border-radius: 1rem;
+          background: rgba(0, 0, 0, 0.8);
+          margin-bottom: 100vh;
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+        .story-text h2 {
+          margin: 0 0 1rem;
+        }
 
-    <div class="photo-section">
-      <div class="story-text">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-        <audio controls>
-          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div class="photo">
-        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      </div>
-    </div>
-
-    <div class="photo-section">
-      <div class="story-text">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-        <audio controls>
-          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div class="photo">
-        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      </div>
-    </div>
-
-    <div class="photo-section">
-      <div class="story-text">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-        <audio controls>
-          <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div class="photo">
-        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      </div>
-    </div>
-
-    <div class="photo-section last">
-      <div class="special-case-text">
-        <div class="story-text">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dictum lectus. Integer pellentesque felis vitae metus vestibulum, eu sollicitudin velit luctus. Nam nec.</h2>
-          <audio controls>
-            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-        <div class="bottom-of-article-row">
-          <div class="social-links">
-            <h4>More about {name}</h4>
-            <div class="icon-row">
-              <a href="https://twitter.com/" target="_blank"><i class="ph-twitter-logo"></i></a>
-              <a href="https://tiktok.com/" target="_blank"><i class="ph-tiktok-logo"></i></a>
-            </div>
+        .bottom-of-article-row {
+          bottom: 0;
+          display: flex;
+          width: 100%;
+          box-sizing: border-box;
+          padding: 1rem;
+          background: #010101;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="multimedia-page-wrapper">
+      <div class="photo-section">
+        <div class="special-case-text">
+          <div class="page-title">
+            <h1 style="text-align: center; margin-top: 20vh">Fans Talk</h1>
+            <p style="text-align: center">Tagline</p>
           </div>
-          <a class="next-story-link" href="/stories/borleone.html">
-            Next story <i class="ph-arrow-right"></i>
-          </a>
+          <div class="story-text">
+            <h2>“If drill music is gone, there will still be violence.”</h2>
+            <audio controls>
+              <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+        <div class="photo">
+          <img class="photo-card" src="assets/coach-coop/cc1.jpg" />
         </div>
       </div>
-      <div class="photo">
-        <img class="photo-card" src="assets/coach-coop/cc1.jpg"/>
-      </div>
-    </div>
 
-  </main>
-</body>
+      <div class="photo-section">
+        <div class="story-text">
+          <h2>
+            “People who talk about being in the gang don't even know the origin
+            of that gang.”
+          </h2>
+          <audio controls>
+            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="photo">
+          <img class="photo-card" src="assets/coach-coop/cc1.jpg" />
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <div class="story-text">
+          <h2>“TikTok lets people have fun with drill music.”</h2>
+          <audio controls>
+            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="photo">
+          <img class="photo-card" src="assets/coach-coop/cc1.jpg" />
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <div class="story-text">
+          <h2>
+            “It's risky for women to do drill, because the males don't care,
+            they can harm anybody.”
+          </h2>
+          <audio controls>
+            <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="photo">
+          <img class="photo-card" src="assets/coach-coop/cc1.jpg" />
+        </div>
+      </div>
+
+      <div class="photo-section last">
+        <div class="special-case-text">
+          <div class="story-text">
+            <h2>
+              “Once you get big, especially in Brooklyn, you gotta get out of
+              here.”
+            </h2>
+            <audio controls>
+              <source src="assets/audio/touch-of-grey.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+          <div class="bottom-of-article-row">
+            <div class="social-links">
+              <h4>More about The B.R.O. Experience</h4>
+              <div class="icon-row">
+                <a href="https://www.thebroexperience.org/" target="_blank"
+                  ><i class="ph-article"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/thebroexperience_/?hl=en"
+                  target="_blank"
+                  ><i class="ph-instagram-logo"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/thebroexperiencefoundation"
+                  target="_blank"
+                  ><i class="ph-facebook-logo"></i
+                ></a>
+              </div>
+            </div>
+            <a class="next-story-link" href="/index.html"> Back Home </a>
+            <a class="next-story-link" href="/stories/young-devyn.html">
+              Next Story <i class="ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="photo">
+          <img class="photo-card" src="assets/coach-coop/cc1.jpg" />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

@@ -594,11 +594,11 @@ a.next-story-link:hover {
 }
 
 .about-header h2 {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
 }
 
 .about-header p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: justify;
 }
 
@@ -639,7 +639,7 @@ a.next-story-link:hover {
 }
 
 .bio-card-back p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: justify;
 }
 .hidden {
