@@ -17,6 +17,9 @@ function setVideoSize() {
   }
 
   if (w.matches) {
+
+    videos[1].setAttribute('poster', '../assets/landing-page/coopCoverPhoto.jpg');
+
     let i = 0;
   
     for (i; i < videos.length; i++) {
@@ -62,6 +65,9 @@ function startIntro() {
   const adamsVideo = document.querySelector('#adams-video');
   adamsVideo.scrollIntoView({behavior: 'smooth'});
   adamsVideo.querySelector('video').play();
+
+  // const navbar = document.querySelector('nav');
+  // navbar.classList.add('hidden')
 }
 
 // Auto add/hide image accompanying text animation
@@ -216,33 +222,3 @@ function closeModal() {
 
   
 };
-
-
-// Flip cards on hover
-
-const bioCardsList = document.querySelectorAll('.bio-card');
-
-let i = 0;
-
-for (i; i < bioCardsList.length; i++) {
-  const bioCard = bioCardsList[i];
-
-  bioCard.addEventListener("mouseenter", function() {
-    const bioCardBack = bioCard.querySelector('.bio-card-back');
-    bioCardBack.classList.remove('hidden');
-
-    const bioCardFront = bioCard.querySelector('.bio-card-front');
-    bioCardFront.classList.add('hidden');
-  });
-  bioCard.addEventListener("mouseleave", function() {
-    const bioCardBack = bioCard.querySelector('.bio-card-back');
-    bioCardBack.classList.add('hidden');
-
-    const bioCardFront = bioCard.querySelector('.bio-card-front');
-    bioCardFront.classList.remove('hidden');
-  });
-}
-
-function flipCard() {
-  
-}
