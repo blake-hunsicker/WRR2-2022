@@ -589,15 +589,16 @@ a.next-story-link:hover {
 }
 /* About Page */
 
-.about-header {
+.about-header-section {
   padding: 2rem 2rem 0;
 }
 
-.about-header h2 {
+.about-header {
   font-family: "Staatliches", cursive;
+  letter-spacing: 1.5px;
 }
 
-.about-header p {
+.about-text {
   font-family: "Poppins", sans-serif;
   text-align: justify;
 }
