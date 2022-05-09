@@ -144,7 +144,7 @@ nav button {
 }
 .modal-close-button {
   position: fixed;
-  top: 10vh;
+  top: 5vh;
   right: 12vw;
   padding: 0.25rem;
   font-size: 1.5rem;
