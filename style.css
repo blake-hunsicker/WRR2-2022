@@ -137,7 +137,7 @@ nav button:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -157,7 +157,7 @@ nav button:hover {
   margin: auto;
   border: 1px solid #444;
   outline: none;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .modal-close-button {
   position: fixed;
@@ -290,26 +290,60 @@ nav button:hover {
 
 button.play-button {
   z-index: 1;
-  font-family: "Staatliches", cursive;
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #eee;
-  background: #222;
+  background: #62262c;
   position: absolute;
   bottom: 5vh;
   right: 0;
   left: 0;
-  width: 200px;
+  height: 40px;
+  width: 40px;
   padding: 1rem 1rem;
   outline: none;
-  border: 1px solid #444;
-  border-radius: 0.5rem;
+  border: none;
+  border-radius: 50%;
   margin: 0 auto;
+  animation: glowing 2.5s infinite;
+  -webkit-animation: glowing 2.5s infinite;
 }
 
 button.play-button:hover {
+  animation: none;
+  -webkit-animation: none;
   cursor: pointer;
-  background: #333;
-  border: 1px solid #777;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #62262c;
+    box-shadow: 0 0 10px #62262c;
+  }
+  50% {
+    background-color: #aa4a44;
+    box-shadow: 0 0 40px #aa4a44;
+  }
+  100% {
+    background-color: #62262c;
+    box-shadow: 0 0 10px #62262c;
+  }
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #62262c;
+    box-shadow: 0 0 10px #62262c;
+  }
+  50% {
+    background-color: #aa4a44;
+    box-shadow: 0 0 40px #aa4a44;
+  }
+  100% {
+    background-color: #62262c;
+    box-shadow: 0 0 10px #62262c;
+  }
 }
 
 .site-hero-image {
@@ -713,38 +747,6 @@ i {
   display: inline-block;
   font-size: 1.5rem;
   padding: 0.5rem 0;
-}
-
-/* Multimedia Story Page */
-
-.story-subhead {
-  margin: 1rem;
-  padding: 0.5rem;
-}
-
-.multimedia-grid {
-  margin: 0 5rem;
-  display: inline-flex;
-}
-
-.multi-image {
-  max-width: 400px;
-  max-height: 300px;
-}
-
-blockquote {
-  max-width: 25%;
-  max-height: 50%;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.mainheader {
-  font-family: roboto sans-serif;
-  font-size: 40px;
 }
 
 /* Photo Gallery */
