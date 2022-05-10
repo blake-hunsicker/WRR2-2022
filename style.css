@@ -137,7 +137,7 @@ nav button:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -157,7 +157,7 @@ nav button:hover {
   margin: auto;
   border: 1px solid #444;
   outline: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .modal-close-button {
   position: fixed;
@@ -482,7 +482,6 @@ button.play-button:hover {
 }
 
 .young-devyn:hover,
-.natasha:hover,
 .shauna:hover,
 .borleone:hover,
 .bill-the-demon:hover,
