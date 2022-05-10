@@ -52,7 +52,8 @@
       audio::-webkit-media-controls-panel {
         background: #999;
       }
-      .photo-section {
+      .photo-section,
+      .photo-section-intro {
         display: flex;
         height: 250vh;
         box-sizing: border-box;
@@ -91,9 +92,6 @@
       }
 
       @media screen and (max-width: 599px) {
-        .page-title {
-          color: #010101;
-        }
         .photo-section {
           flex-direction: column-reverse;
         }
@@ -153,7 +151,7 @@
   </head>
   <body>
     <main class="multimedia-page-wrapper">
-      <div class="photo-section">
+      <div class="photo-section-intro">
         <div class="special-case-text">
           <div class="page-title story-intro-text">
             <h1 style="text-align: center; margin-top: 10vh">Fans Talk</h1>
