@@ -442,7 +442,7 @@ button.play-button:hover {
 }
 
 .young-devyn {
-  background-image: url("assets/story-menu/devyn.png");
+  background-image: url("assets/story-menu/young-devyn.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
