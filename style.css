@@ -630,6 +630,12 @@ a.next-story-link:hover {
   padding: 2rem 2rem 0;
 }
 
+.about-header p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
 .bio-grid {
   margin: 0 auto;
   display: grid;
@@ -667,7 +673,7 @@ a.next-story-link:hover {
 }
 
 .bio-card-back p {
-  font-family: "Poppins", sans-serif;
+  font-size: 12px;
   text-align: justify;
 }
 .hidden {
