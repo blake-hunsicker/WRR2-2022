@@ -628,11 +628,19 @@ a.next-story-link:hover {
 
 .about-header {
   padding: 2rem 2rem 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.about-header h2 {
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
 }
 
 .about-header p {
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: justify;
 }
 
@@ -672,10 +680,6 @@ a.next-story-link:hover {
   overflow: hidden;
 }
 
-.bio-card-back p {
-  font-size: 12px;
-  text-align: justify;
-}
 .hidden {
   display: none;
 }
@@ -724,9 +728,11 @@ a.next-story-link:hover {
 }
 
 .bio-card-back p {
+  font-size: 0.75rem;
   color: #eee;
   padding: 0 0.25rem;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .social-link-box {
