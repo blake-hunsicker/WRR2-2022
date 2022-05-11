@@ -626,18 +626,8 @@ a.next-story-link:hover {
 }
 /* About Page */
 
-.about-header-section {
-  padding: 2rem 2rem 0;
-}
-
 .about-header {
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1.5px;
-}
-
-.about-text {
-  font-family: "Poppins", sans-serif;
-  text-align: justify;
+  padding: 2rem 2rem 0;
 }
 
 .bio-grid {
