@@ -559,15 +559,17 @@ button.play-button:hover {
 
 .story-body {
   margin: 4rem 20vw;
+  padding: 0;
 }
 .story-body p {
   font-size: 1rem;
   margin-top: 2rem;
-  text-align: justify;
 }
 
-.story-body .story-title {
-  padding: 0;
+.story-body h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 3rem;
+  letter-spacing: 2px;
 }
 
 .video-wrapper {
@@ -641,7 +643,6 @@ a.next-story-link:hover {
 .about-header p {
   font-size: 1rem;
   margin-top: 1rem;
-  text-align: justify;
 }
 
 .bio-grid {
@@ -728,11 +729,10 @@ a.next-story-link:hover {
 }
 
 .bio-card-back p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #eee;
   padding: 0 0.25rem;
   margin-bottom: 0;
-  text-align: justify;
 }
 
 .social-link-box {
