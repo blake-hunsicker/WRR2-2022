@@ -645,6 +645,11 @@ a.next-story-link:hover {
   margin-top: 1rem;
 }
 
+.external-link {
+  color: #fff;
+  cursor: pointer;
+}
+
 .bio-grid {
   margin: 0 auto;
   display: grid;
