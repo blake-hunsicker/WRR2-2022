@@ -79,7 +79,7 @@ p {
 /* ==================================== */
 
 nav {
-  z-index: 3;
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
@@ -146,7 +146,7 @@ nav button:hover {
 }
 
 .modal-wrapper {
-  z-index: 3;
+  z-index: 4;
   position: absolute;
   top: 0;
   right: 0;
