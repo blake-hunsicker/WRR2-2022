@@ -451,6 +451,14 @@ button.play-button:hover {
   box-sizing: border-box;
 }
 
+.category-container.collapsed {
+  min-height: 33.33%;
+  height: 33.33vh;
+  max-height: 33.33vh;
+  transition: min-height 0.2s, height 0.2s, max-height 0.2s;
+  box-sizing: border-box;
+}
+
 .category-title {
   font-family: "Staatliches", cursive;
   text-align: center;

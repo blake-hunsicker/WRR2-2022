@@ -145,29 +145,57 @@ function openStories(category) {
   // console.log(category);
   const categoryContainer = document.querySelector(category);
 
+  const allCategories = document.querySelectorAll('.category-container');
+
+  let i;
+
   if (categoryContainer.classList.contains('expanded')) {
-    return;
+
+    // Collapse all sections
+    for (i=0; i < allCategories.length; i++) {
+
+      const categoryID = `#${allCategories[i].id}`;
+      const categoryToJudge = document.querySelector(categoryID);
+
+      categoryToJudge.querySelector('i').classList.remove('ph-caret-up-bold');
+      categoryToJudge.querySelector('i').classList.add('ph-caret-down-bold');
+
+      categoryToJudge.classList.add('collapsed');
+      categoryToJudge.classList.remove('expanded');
+      categoryToJudge.classList.remove('minimized');
+      categoryToJudge.querySelector('.buttons').classList.add('hidden');
+
+    }
+    
   } else {
+
     // Expand category section
+
+    categoryContainer.querySelector('i').classList.remove('ph-caret-down-bold');
+    categoryContainer.querySelector('i').classList.add('ph-caret-up-bold');
+
     categoryContainer.classList.add('expanded');
+    categoryContainer.classList.remove('minimized');
+    categoryContainer.classList.remove('collapsed');
 
-    const allCategories = document.querySelectorAll('.category-container');
-
-    let i;
-
+    // Minimize other sections
     for (i=0; i < allCategories.length; i++) {
       const categoryID = `#${allCategories[i].id}`;
       console.log(categoryID);
       const categoryToJudge = document.querySelector(categoryID)
       if (category != categoryID) {
+        categoryToJudge.querySelector('i').classList.remove('ph-caret-up-bold');
+        categoryToJudge.querySelector('i').classList.add('ph-caret-down-bold');
+
         categoryToJudge.classList.add('minimized');
         categoryToJudge.classList.remove('expanded');
+        categoryToJudge.classList.remove('collapsed');
         categoryToJudge.querySelector('.buttons').classList.add('hidden');
       } else {
         categoryToJudge.classList.remove('minimized');
+        categoryToJudge.classList.remove('collapsed');
       }
     }
-
 
     // Show story buttons
     const buttons = categoryContainer.querySelector('.buttons');
