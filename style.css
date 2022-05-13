@@ -218,7 +218,7 @@ nav button:hover {
 }
 
 .immersive-intro-section {
-  z-index: 4;
+  z-index: 3;
   background: #010101;
   position: relative;
   height: 100vh;
@@ -250,11 +250,11 @@ nav button:hover {
 /* ==================== */
 
 .title-section {
-  z-index: 2;
+  z-index: 3;
 }
 
 .title-text {
-  z-index: 1;
+  z-index: 3;
   text-align: center;
   position: absolute;
   top: 10vh;
@@ -909,7 +909,7 @@ i {
   }
 
   .modal iframe {
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     top: 10;
     right: 0;
@@ -938,7 +938,7 @@ i {
 
 @media screen and (orientation: landscape) and (max-width: 900px) {
   .modal iframe {
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     top: 8vh;
     right: 0;

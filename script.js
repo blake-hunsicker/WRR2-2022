@@ -56,7 +56,7 @@ function setVideoSize() {
   }
 }
 
-// Autoshow video video
+// Autoshow video
 
 function startIntro() {
   const body = document.querySelector('main');
