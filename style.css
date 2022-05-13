@@ -270,7 +270,7 @@ nav button:hover {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   text-shadow: 0 0 7px #000000, 0 0 10px #000000, 0 0 21px #000000,
-    0 0 42px #000000, 0 0 82px #000000, 0 0 92px #000000, 0 0 102px #000000;
+    0 0 42px #000000, 0 0 82px #000000, 0 0 92px #000000;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -299,8 +299,8 @@ button.play-button {
   bottom: 5vh;
   right: 0;
   left: 0;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   padding: 1rem 1rem;
   outline: none;
   border: none;
