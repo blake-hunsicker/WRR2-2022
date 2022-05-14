@@ -573,7 +573,7 @@ button.play-button:hover {
 }
 
 .story-body {
-  margin: 4rem 20vw;
+  margin: 4rem 20vw 0rem;
   padding: 0;
 }
 .story-body p {
@@ -807,6 +807,9 @@ i {
 /* ==================================== */
 
 @media screen and (min-width: 900px) and (max-width: 1199px) {
+  .modal-close-button {
+    right: 10vw;
+  }
   .image-and-text:nth-child(even) {
     flex-direction: row;
   }
@@ -836,6 +839,9 @@ i {
 /* ==================================== */
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
+  .modal-close-button {
+    right: 8vw;
+  }
   .image-and-text:nth-child(even) {
     flex-direction: column;
   }
