@@ -135,12 +135,6 @@ function videoScroll() {
         thisVideoEl.pause();
       }
 
-      // if ( videoClientRect <= ( (windowHeight) - (videoHeight*.4) ) && videoClientRect >= ( 0 - (videoHeight*.4) ) ) {
-      //   thisVideoEl.classList.add('appear');
-      // } else {
-      //   thisVideoEl.classList.remove('appear');
-      // }
-
     }
   }
 }
@@ -230,14 +224,6 @@ function openModal(pageUrl) {
 
   const body = document.querySelector('body');
   body.classList.toggle('freeze');
-
-  // // Show loading message
-  // if (document.readyState === 'complete') {
-  //   // The page is fully loaded
-  //   console.log('Loaded')
-  // } else {
-  //   // Show loading message
-  // }
   
 };
 
