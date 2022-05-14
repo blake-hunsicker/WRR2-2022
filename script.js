@@ -7,7 +7,7 @@ window.addEventListener('resize', setVideoSize);
 window.addEventListener('DOMContentLoaded', setVideoSize);
 
 function setVideoSize() {
-  const w = window.matchMedia("(max-width: 600px)");
+  const w = window.matchMedia("(max-width: 900px)");
   const videos = document.querySelectorAll('video');
 
   if (w.matches) {
