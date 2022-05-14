@@ -1,7 +1,11 @@
+:root {
+  --app-height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  max-height: -webkit-fill-available;
+  height: var(--app-height);
   color: #eeeeee;
   background: #010101;
   margin: 0;

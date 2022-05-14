@@ -1,7 +1,13 @@
-// Load videos based on viewport width
+// Size site around mobile browser search bars
 
-// const w = window.matchMedia("(max-width: 600px)");
-// const videos = document.querySelectorAll('video');
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
+
+// Load videos based on viewport width
 
 window.addEventListener('resize', setVideoSize);
 window.addEventListener('DOMContentLoaded', setVideoSize);
