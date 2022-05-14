@@ -54,17 +54,26 @@
       }
       .photo-section {
         display: flex;
+        min-height: 250vh;
         height: 250vh;
-        box-sizing: border-box;
+        max-height: 250vh;
+        width: 100vw;
+      }
+      .special-case-text {
+        width: 50vw;
       }
       .last {
-        height: fit-content;
+        min-height: 100vh;
+        height: 100vh;
+        max-height: 100vh;
       }
       .story-intro-text {
-        padding: 0 8rem;
+        width: 50vw;
+        padding: 2rem;
+        box-sizing: border-box;
       }
       .story-intro-text h1 {
-        font-family: "Staatliches", cursive;
+        font-family: "Staatliches";
         letter-spacing: 1.5px;
       }
       .story-intro-text p {
@@ -72,12 +81,14 @@
         text-align: center;
       }
       .story-intro-audio {
-        padding: 0 8rem;
-        margin-top: 25vh;
+        padding: 0 2rem;
+        margin-top: 12.5vh;
       }
       .story-text {
+        width: 50vw;
+        box-sizing: border-box;
+        padding: 0 2rem;
         margin-top: 100vh;
-        padding: 0 8rem;
       }
 
       .story-text p,
@@ -88,11 +99,14 @@
       .photo {
         position: sticky;
         top: 0;
+        bottom: 0;
+        min-width: 50vw;
         width: 50vw;
+        min-height: 100vh;
         height: 100vh;
       }
       img.photo-card {
-        width: 50vw;
+        width: 100%;
         height: 100%;
         object-fit: cover;
       }
@@ -100,6 +114,9 @@
       .last p {
         font-size: 0.875rem;
         font-weight: 300;
+      }
+      .credits {
+        padding: 2rem 2rem 0;
       }
 
       .bottom-of-article-row {
@@ -114,52 +131,34 @@
         .photo-section {
           flex-direction: column-reverse;
         }
-        .photo {
-          z-index: 1;
-          width: 100vw;
-        }
-        img.photo-card {
-          width: 100vw;
-          height: 100vh;
-          object-fit: cover;
-        }
-        .special-case-text {
+        .special-case-text, .story-text {
           z-index: 2;
-        }
-        .story-intro-text,
-        .story-intro-audio {
-          z-index: 2;
-          padding: 1rem 1rem 1rem;
-          border-radius: 0rem;
-          background: rgba(0, 0, 0, 0.8);
-          margin-right: 1rem;
-          margin-left: 1rem;
-        }
-        .story-text {
-          z-index: 2;
-          margin-top: 100vh;
-          padding: 1rem 1rem 1rem;
-          border-radius: 0rem;
-          background: rgba(0, 0, 0, 0.8);
-          margin-bottom: 100vh;
-          margin-right: 1rem;
-          margin-left: 1rem;
-        }
-        .story-text h2,
-        .story-intro-audio h2,
-        .story-text p,
-        .story-intro-audio p {
-          margin: 0 0 1rem;
-        }
-
-        .bottom-of-article-row {
-          bottom: 0;
-          display: flex;
-          width: 100%;
-          box-sizing: border-box;
+          width: 90vw;
+          max-width: 90vw;
+          background: rgba(0,0,0,0.9);
           padding: 1rem;
-          background: #010101;
-          margin: 0;
+          margin: 0 5vw 20rem;
+          box-sizing: border-box;
+          border-radius: 12px;
+          /* padding: 0; */
+        }
+        .speial-case-text:last-of-type {
+          margin: 0 5rem 5rem;
+        }
+        .story-intro-text {
+          width: 100%;
+        }
+        .photo {
+          min-width: 100vw;
+          width: 100vw;
+        }
+        .bottom-of-article-row {
+          flex-direction: column;
+        }
+        .next-story-link {
+          text-align: center;
+          width: 100%;
+          margin: 2rem 0 0;
         }
       }
     </style>
@@ -195,7 +194,7 @@
               hear it.
             </p>
           </div>
-          <div class="story-intro-audio">
+          <div style="padding: 0 2rem;">
             <h2>The B.R.O. Experience</h2>
             <p>“There is a power that lies in my voice and my presence.”</p>
             <audio controls controlsList="nodownload noplaybackrate">
@@ -312,8 +311,7 @@
       </div>
 
       <div class="photo-section last">
-        <div class="special-case-text">
-          <div class="story-text">
+        <div class="special-case-text credits">
             <p>
               Producers: Marcello Corrêa, Jeff Poirier, Sinta Taylor, Noah John
             </p>
@@ -323,7 +321,6 @@
             <p>Sound Editor and Copywriter: Karolis Vyšniauskas</p>
             <p>Photography: Thu Dao, Jeff Poirier</p>
             <p>Research: Carla Nudel, Noah John</p>
-          </div>
           <div class="bottom-of-article-row">
             <div class="social-links">
               <h4>More about The B.R.O. Experience</h4>
