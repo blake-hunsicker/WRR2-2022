@@ -427,6 +427,8 @@ button.play-button:hover {
   flex-direction: column;
   overflow-y: scroll;
   width: 100vw;
+  height: 100vh;
+  height: var(--app-height);
   margin: 0;
   padding: 0;
 }
