@@ -216,6 +216,7 @@ nav button:hover {
 
 .homepage-container {
   height: 100vh;
+  height: var(--app-height);
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
@@ -227,6 +228,7 @@ nav button:hover {
   background: #010101;
   position: relative;
   height: 100vh;
+  height: var(--app-height);
   width: 100vw;
   scroll-snap-align: start;
 }
