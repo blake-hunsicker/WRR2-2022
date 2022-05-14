@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  max-height: -webkit-fill-available;
   color: #eeeeee;
   background: #010101;
   margin: 0;
