@@ -19,7 +19,7 @@ function setVideoSize() {
   if (w.matches) {
     const siteHeroImage = document.querySelector('.site-hero-image');
     siteHeroImage.removeAttribute('src');
-    siteHeroImage.setAttribute('src','../assets/landing-page/mobileimage0.png')
+    siteHeroImage.setAttribute('src','../assets/landing-page/drill-down-mobile.png')
   }
 
   if (w.matches) {
