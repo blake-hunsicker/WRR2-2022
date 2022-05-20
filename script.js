@@ -25,6 +25,9 @@ function setVideoSize() {
   if (w.matches) {
 
     let i = 0;
+
+    videos[0].setAttribute('poster','../assets/landing-page/trailerCoverPhoto.png');
+    videos[1].setAttribute('poster', '../assets/landing-page/coop-poster-mobile.png');
   
     for (i; i < videos.length; i++) {
   
@@ -43,6 +46,9 @@ function setVideoSize() {
   } else {
   
     let i = 0;
+
+    videos[0].setAttribute('poster','../assets/landing-page/trailerCoverPhoto.png');
+    videos[1].setAttribute('poster', '../assets/landing-page/coop-poster-desktop.png');
   
     for (i; i < videos.length; i++) {
 
