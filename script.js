@@ -24,8 +24,6 @@ function setVideoSize() {
 
   if (w.matches) {
 
-    videos[1].setAttribute('poster', '../assets/landing-page/coopCoverPhoto.jpg');
-
     let i = 0;
   
     for (i; i < videos.length; i++) {

@@ -839,6 +839,12 @@ i {
 /* ==================================== */
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
+  .bio-card:hover .bio-card-inner .bio-card-front .bio-image-wrapper {
+    display: block;
+  }
+  .bio-card:hover .bio-card-inner .bio-card-back {
+    display: none;
+  }
   .modal-close-button {
     right: 8vw;
   }
@@ -881,6 +887,12 @@ i {
 /* ==================================== */
 
 @media screen and (max-width: 599px) {
+  .bio-card:hover .bio-card-inner .bio-card-front .bio-image-wrapper {
+    display: block;
+  }
+  .bio-card:hover .bio-card-inner .bio-card-back {
+    display: none;
+  }
   .title-text h1 {
     line-height: 1;
   }
